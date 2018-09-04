@@ -5,13 +5,15 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-08-28 13:13:57.
+    * Generated on 2018-09-04 16:35:52.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
     */
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
+        'App\Services\LinkGeneratorService' => \App\Services\LinkGeneratorService::class,
+        'App\Services\TreeRecursiveBuildService' => \App\Services\TreeRecursiveBuildService::class,
         'App\Services\UploadCkeditorImageService' => \App\Services\UploadCkeditorImageService::class,
         'App\Services\UploadImagesService' => \App\Services\UploadImagesService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
@@ -118,7 +120,6 @@ namespace PHPSTORM_META {
         'db' => \Illuminate\Database\DatabaseManager::class,
         'db.connection' => \Illuminate\Database\MySqlConnection::class,
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
-        'encrypter' => \Illuminate\Encryption\Encrypter::class,
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -154,6 +155,8 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
+        'App\Services\LinkGeneratorService' => \App\Services\LinkGeneratorService::class,
+        'App\Services\TreeRecursiveBuildService' => \App\Services\TreeRecursiveBuildService::class,
         'App\Services\UploadCkeditorImageService' => \App\Services\UploadCkeditorImageService::class,
         'App\Services\UploadImagesService' => \App\Services\UploadImagesService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
@@ -260,7 +263,6 @@ namespace PHPSTORM_META {
         'db' => \Illuminate\Database\DatabaseManager::class,
         'db.connection' => \Illuminate\Database\MySqlConnection::class,
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
-        'encrypter' => \Illuminate\Encryption\Encrypter::class,
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -296,6 +298,8 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
+        'App\Services\LinkGeneratorService' => \App\Services\LinkGeneratorService::class,
+        'App\Services\TreeRecursiveBuildService' => \App\Services\TreeRecursiveBuildService::class,
         'App\Services\UploadCkeditorImageService' => \App\Services\UploadCkeditorImageService::class,
         'App\Services\UploadImagesService' => \App\Services\UploadImagesService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
@@ -402,7 +406,6 @@ namespace PHPSTORM_META {
         'db' => \Illuminate\Database\DatabaseManager::class,
         'db.connection' => \Illuminate\Database\MySqlConnection::class,
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
-        'encrypter' => \Illuminate\Encryption\Encrypter::class,
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -438,6 +441,8 @@ namespace PHPSTORM_META {
     ]));
     override(\App::make(0), map([
         '' => '@',
+        'App\Services\LinkGeneratorService' => \App\Services\LinkGeneratorService::class,
+        'App\Services\TreeRecursiveBuildService' => \App\Services\TreeRecursiveBuildService::class,
         'App\Services\UploadCkeditorImageService' => \App\Services\UploadCkeditorImageService::class,
         'App\Services\UploadImagesService' => \App\Services\UploadImagesService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
@@ -544,7 +549,6 @@ namespace PHPSTORM_META {
         'db' => \Illuminate\Database\DatabaseManager::class,
         'db.connection' => \Illuminate\Database\MySqlConnection::class,
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
-        'encrypter' => \Illuminate\Encryption\Encrypter::class,
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -580,6 +584,8 @@ namespace PHPSTORM_META {
     ]));
     override(\App::makeWith(0), map([
         '' => '@',
+        'App\Services\LinkGeneratorService' => \App\Services\LinkGeneratorService::class,
+        'App\Services\TreeRecursiveBuildService' => \App\Services\TreeRecursiveBuildService::class,
         'App\Services\UploadCkeditorImageService' => \App\Services\UploadCkeditorImageService::class,
         'App\Services\UploadImagesService' => \App\Services\UploadImagesService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
@@ -686,7 +692,6 @@ namespace PHPSTORM_META {
         'db' => \Illuminate\Database\DatabaseManager::class,
         'db.connection' => \Illuminate\Database\MySqlConnection::class,
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
-        'encrypter' => \Illuminate\Encryption\Encrypter::class,
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -722,6 +727,8 @@ namespace PHPSTORM_META {
     ]));
     override(\app(0), map([
         '' => '@',
+        'App\Services\LinkGeneratorService' => \App\Services\LinkGeneratorService::class,
+        'App\Services\TreeRecursiveBuildService' => \App\Services\TreeRecursiveBuildService::class,
         'App\Services\UploadCkeditorImageService' => \App\Services\UploadCkeditorImageService::class,
         'App\Services\UploadImagesService' => \App\Services\UploadImagesService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
@@ -828,7 +835,6 @@ namespace PHPSTORM_META {
         'db' => \Illuminate\Database\DatabaseManager::class,
         'db.connection' => \Illuminate\Database\MySqlConnection::class,
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
-        'encrypter' => \Illuminate\Encryption\Encrypter::class,
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -864,6 +870,8 @@ namespace PHPSTORM_META {
     ]));
     override(\resolve(0), map([
         '' => '@',
+        'App\Services\LinkGeneratorService' => \App\Services\LinkGeneratorService::class,
+        'App\Services\TreeRecursiveBuildService' => \App\Services\TreeRecursiveBuildService::class,
         'App\Services\UploadCkeditorImageService' => \App\Services\UploadCkeditorImageService::class,
         'App\Services\UploadImagesService' => \App\Services\UploadImagesService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
@@ -970,7 +978,6 @@ namespace PHPSTORM_META {
         'db' => \Illuminate\Database\DatabaseManager::class,
         'db.connection' => \Illuminate\Database\MySqlConnection::class,
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
-        'encrypter' => \Illuminate\Encryption\Encrypter::class,
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
