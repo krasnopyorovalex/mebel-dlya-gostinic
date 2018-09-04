@@ -83,6 +83,7 @@
                             <li><a href="{{ route('admin.pages.index') }}"><i class="icon-compose"></i> <span>Страницы</span></a></li>
                             <li><a href="{{ route('admin.about_counts.index') }}"><i class="icon-bubble-lines4"></i> <span>О нас(счётчики)</span></a></li>
                             <li><a href="{{ route('admin.ready_solutions.index') }}"><i class="icon-checkmark4"></i> <span>Готовые решения</span></a></li>
+                            <li><a href="{{ route('admin.partners.index') }}"><i class="icon-collaboration"></i> <span>С кем мы работаем</span></a></li>
                             <li><a href="{{ route('admin.banners.index') }}"><i class="icon-images3"></i> <span>Баннеры</span></a></li>
                             <li><a href="{{ route('admin.services.index') }}"><i class="icon-list"></i> <span>Услуги</span></a></li>
                             <li><a href="{{ route('admin.articles.index') }}"><i class="icon-magazine"></i> <span>Статьи</span></a></li>

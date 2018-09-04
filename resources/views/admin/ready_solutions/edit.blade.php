@@ -60,8 +60,4 @@
     @include('layouts.partials._image_attributes_popup', ['image' => $readySolution->image])
 @endif
 
-@push('scripts')
-    <script src="{{ asset('dashboard/laravel-ckeditor/ckeditor.js') }}"></script>
-@endpush
-
 @endsection
