@@ -28,6 +28,7 @@
                 @input(['name' => 'name', 'label' => 'Название'])
                 @input(['name' => 'title', 'label' => 'Title'])
                 @input(['name' => 'description', 'label' => 'Description'])
+                @input(['name' => 'keywords', 'label' => 'Keywords'])
                 @input(['name' => 'alias', 'label' => 'Alias'])
 
                 @imageInput(['name' => 'image', 'type' => 'file', 'label' => 'Выберите изображение на компьютере'])

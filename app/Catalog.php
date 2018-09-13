@@ -9,7 +9,7 @@ class Catalog extends Model
     /**
      * @var array
      */
-    protected $fillable = ['parent_id', 'name', 'title', 'description', 'text', 'alias', 'is_published', 'pos'];
+    protected $fillable = ['parent_id', 'name', 'title', 'description', 'keywords', 'text', 'alias', 'is_published', 'pos'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

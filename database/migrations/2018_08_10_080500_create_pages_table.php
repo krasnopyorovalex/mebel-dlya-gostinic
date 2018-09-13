@@ -17,7 +17,8 @@ class CreatePagesTable extends Migration
             $table->increments('id');
             $table->string('name', 512);
             $table->string('title', 512);
-            $table->string('description', 512);
+            $table->string('description', 512)->nullable();
+            $table->string('keywords', 512)->nullable();
             $table->text('text');
             $table->string('alias', 255)->unique();
             $table->enum('is_published',[0,1])->default(1);

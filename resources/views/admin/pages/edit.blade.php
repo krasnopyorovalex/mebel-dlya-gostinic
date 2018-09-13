@@ -29,6 +29,7 @@
                             @input(['name' => 'name', 'label' => 'Название', 'entity' => $page])
                             @input(['name' => 'title', 'label' => 'Title', 'entity' => $page])
                             @input(['name' => 'description', 'label' => 'Description', 'entity' => $page])
+                            @input(['name' => 'keywords', 'label' => 'Keywords', 'entity' => $page])
 
                             @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $page])
                             @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $page])

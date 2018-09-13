@@ -27,7 +27,7 @@ class Page extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'title', 'description', 'text', 'alias', 'is_published'];
+    protected $fillable = ['name', 'title', 'description', 'keywords', 'text', 'alias', 'is_published'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne

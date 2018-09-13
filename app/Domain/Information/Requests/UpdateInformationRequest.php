@@ -16,7 +16,8 @@ class UpdateInformationRequest extends Request
         return [
             'name' => 'bail|required|max:512',
             'title' => 'required|max:512',
-            'description' => 'max:512',
+            'description' => 'max:512|nullable',
+            'keywords' => 'max:512|nullable',
             'text' => 'required|string',
             'is_published' => 'digits_between:0,1',
             'image' => 'image',

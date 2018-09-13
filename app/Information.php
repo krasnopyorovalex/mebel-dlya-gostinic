@@ -18,7 +18,7 @@ class Information extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'title', 'description', 'text', 'preview', 'alias', 'is_published', 'published_at'];
+    protected $fillable = ['name', 'title', 'description', 'keywords', 'text', 'preview', 'alias', 'is_published', 'published_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne

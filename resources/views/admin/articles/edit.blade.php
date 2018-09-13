@@ -31,6 +31,7 @@
                                     @input(['name' => 'name', 'label' => 'Название', 'entity' => $article])
                                     @input(['name' => 'title', 'label' => 'Title', 'entity' => $article])
                                     @input(['name' => 'description', 'label' => 'Description', 'entity' => $article])
+                                    @input(['name' => 'keywords', 'label' => 'Keywords', 'entity' => $article])
                                 </div>
                             </div>
                             <div class="row">

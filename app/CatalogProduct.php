@@ -9,7 +9,7 @@ class CatalogProduct extends Model
     /**
      * @var array
      */
-    protected $fillable = ['catalog_id', 'name', 'title', 'description', 'text', 'alias', 'is_published', 'pos'];
+    protected $fillable = ['catalog_id', 'name', 'title', 'description', 'keywords', 'text', 'alias', 'is_published', 'pos'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne

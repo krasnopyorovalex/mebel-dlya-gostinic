@@ -17,7 +17,8 @@ class CreateInformationsTable extends Migration
             $table->increments('id');
             $table->string('name', 512);
             $table->string('title', 512);
-            $table->string('description', 512);
+            $table->string('description', 512)->nullable();
+            $table->string('keywords', 512)->nullable();
             $table->text('preview');
             $table->text('text');
             $table->string('alias', 255)->unique();

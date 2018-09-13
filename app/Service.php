@@ -11,7 +11,7 @@ class Service extends Model
     /**
      * @var array
      */
-    protected $fillable = ['parent_id', 'name', 'title', 'description', 'preview', 'text', 'alias', 'is_published', 'pos'];
+    protected $fillable = ['parent_id', 'name', 'title', 'description', 'keywords', 'preview', 'text', 'alias', 'is_published', 'pos'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

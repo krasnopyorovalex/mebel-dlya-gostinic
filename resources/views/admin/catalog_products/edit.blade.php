@@ -30,6 +30,7 @@
                                 @input(['name' => 'name', 'label' => 'Название', 'entity' => $catalogProduct])
                                 @input(['name' => 'title', 'label' => 'Title', 'entity' => $catalogProduct])
                                 @input(['name' => 'description', 'label' => 'Description', 'entity' => $catalogProduct])
+                                @input(['name' => 'keywords', 'label' => 'Keywords', 'entity' => $catalogProduct])
 
                                 @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $catalogProduct])
 

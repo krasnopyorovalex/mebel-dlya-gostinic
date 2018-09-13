@@ -30,6 +30,7 @@
                 @input(['name' => 'name', 'label' => 'Название'])
                 @input(['name' => 'title', 'label' => 'Title'])
                 @input(['name' => 'description', 'label' => 'Description'])
+                @input(['name' => 'keywords', 'label' => 'Keywords'])
                 @input(['name' => 'alias', 'label' => 'Alias'])
 
                 @textarea(['name' => 'preview', 'label' => 'Превью услуги', 'id' => 'editor-full2'])

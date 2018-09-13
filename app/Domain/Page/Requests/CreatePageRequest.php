@@ -15,7 +15,8 @@ class CreatePageRequest extends Request
         return [
             'name' => 'bail|required|max:512',
             'title' => 'required|max:512',
-            'description' => 'max:512',
+            'description' => 'max:512|nullable',
+            'keywords' => 'max:512|nullable',
             'text' => 'required|string',
             'alias' => 'required|max:255|unique:pages',
             'is_published' => 'digits_between:0,1',
