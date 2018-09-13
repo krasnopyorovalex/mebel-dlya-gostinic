@@ -7,7 +7,6 @@ use Illuminate\View\View;
 
 class PageController extends Controller
 {
-
     /**
      * @param string $alias
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View

@@ -15,6 +15,7 @@ class CreateTextBlocksTable extends Migration
     {
         Schema::create('text_blocks', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('sys_name', 32)->unique();
             $table->string('name', 64);
             $table->text('text');
         });

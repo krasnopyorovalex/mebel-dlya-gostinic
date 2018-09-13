@@ -27,6 +27,7 @@
                         <div class="tab-pane active" id="main">
 
                             @input(['name' => 'name', 'label' => 'Название', 'entity' => $textBlock])
+                            @input(['name' => 'sys_name', 'label' => 'Системное имя', 'entity' => $textBlock])
                             @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $textBlock])
 
                             @submit_btn()

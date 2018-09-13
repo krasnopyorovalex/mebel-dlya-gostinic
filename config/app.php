@@ -164,7 +164,8 @@ return [
         App\Providers\UploadImagesServiceProvider::class,
         App\Providers\LinkGeneratorServiceProvider::class,
         App\Providers\TreeRecursiveBuildServiceProvider::class,
-
+        App\Providers\TextBlockServiceProvider::class,
+        App\Providers\MenuServiceProvider::class,
     ],
 
     /*

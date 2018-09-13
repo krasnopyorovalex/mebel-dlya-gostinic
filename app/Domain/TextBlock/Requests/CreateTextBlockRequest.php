@@ -15,6 +15,7 @@ class CreateTextBlockRequest extends Request
         return [
             'name' => 'bail|required|string|max:64',
             'text' => 'required|string',
+            'sys_name' => 'required|unique:text_blocks|string|max:32',
         ];
     }
 
@@ -27,7 +28,8 @@ class CreateTextBlockRequest extends Request
     {
         return [
             'name.required' => 'Поле «Название» обязательно для заполнения',
-            'text.required' => 'Поле «Текст» обязательно для заполнения'
+            'text.required' => 'Поле «Текст» обязательно для заполнения',
+            'sys_name.required' => 'Поле «Системное имя» обязательно для заполнения'
         ];
     }
 }

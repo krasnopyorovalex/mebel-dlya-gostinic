@@ -3,7 +3,7 @@
 namespace Domain\TextBlock\Requests;
 
 use App\Http\Requests\Request;
-
+use Illuminate\Validation\Rule;
 
 /**
  * Class UpdateTextBlockRequest
@@ -15,7 +15,13 @@ class UpdateTextBlockRequest extends Request
     {
         return [
             'name' => 'bail|required|string|max:64',
-            'text' => 'required|string'
+            'text' => 'required|string',
+            'sys_name' => [
+                'required',
+                'string',
+                'max:32',
+                Rule::unique('text_blocks')->ignore($this->id)
+            ]
         ];
     }
 
@@ -28,7 +34,8 @@ class UpdateTextBlockRequest extends Request
     {
         return [
             'name.required' => 'Поле «Название» обязательно для заполнения',
-            'text.required' => 'Поле «Текст» обязательно для заполнения'
+            'text.required' => 'Поле «Текст» обязательно для заполнения',
+            'sys_name.required' => 'Поле «Системное имя» обязательно для заполнения'
         ];
     }
 }

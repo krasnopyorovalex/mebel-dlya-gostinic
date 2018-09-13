@@ -42,20 +42,10 @@
                         <div class="rd-navbar-top-panel__content">
                             <ul class="rd-navbar-items-list">
                                 <li>
-                                    <ul class="list-inline-xxs">
-                                        <li><a href="#" data-toggle="modal" data-target="#modalLogin">Sign In</a></li>
-                                        <li><a href="#" data-toggle="modal" data-target="#modalRegister">Create an Account</a></li>
-                                    </ul>
+                                    {!! $textBlocks->get('header_phones') !!}
                                 </li>
                                 <li>
-                                    <ul class="list-inline-xxs">
-                                        <li><a class="icon icon-xxs icon-gray-4 fa fa-facebook" href="#"></a></li>
-                                        <li><a class="icon icon-xxs icon-gray-4 fa fa-twitter" href="#"></a></li>
-                                        <li><a class="icon icon-xxs icon-gray-4 fa fa-google-plus" href="#"></a></li>
-                                        <li><a class="icon icon-xxs icon-gray-4 fa fa-vimeo" href="#"></a></li>
-                                        <li><a class="icon icon-xxs icon-gray-4 fa fa-youtube" href="#"></a></li>
-                                        <li><a class="icon icon-xxs icon-gray-4 fa fa-pinterest-p" href="#"></a></li>
-                                    </ul>
+                                    {!! $textBlocks->get('header_socials') !!}
                                 </li>
                             </ul>
                         </div>
@@ -70,141 +60,18 @@
                     </div>
                     <!-- RD Navbar Nav-->
                     <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
-                        <ul class="rd-navbar-items-list rd-navbar-search_collapsable">
-                            <li>
-                                <button class="rd-navbar-search__toggle rd-navbar-fixed--hidden" data-rd-navbar-toggle=".rd-navbar-search-wrap"></button>
-                            </li>
-                            <li class="rd-navbar-nav-wrap__shop"><a class="icon icon-md linear-icon-cart link-primary" href="cart.html"></a></li>
-                        </ul>
-                        <!-- RD Search-->
-                        <div class="rd-navbar-search rd-navbar-search_toggled rd-navbar-search_not-collapsable">
-                            <form class="rd-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
-                                <div class="form-wrap">
-                                    <input class="form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
-                                    <label class="form-label" for="rd-navbar-search-form-input">Enter keyword</label>
-                                    <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                                </div>
-                                <button class="rd-search__submit" type="submit"></button>
-                            </form>
-                            <div class="rd-navbar-fixed--hidden">
-                                <button class="rd-navbar-search__toggle" data-custom-toggle=".rd-navbar-search-wrap" data-custom-toggle-disable-on-blur="true"></button>
-                            </div>
-                        </div>
                         <div class="rd-navbar-search_collapsable">
-                            <ul class="rd-navbar-nav">
-                                <li class="active"><a href="index.html">Home</a>
-                                    <ul class="rd-navbar-dropdown">
-                                        <li><a href="index.html">Home Default</a>
-                                        </li>
-                                        <li><a href="home-business.html">Home Business</a>
-                                        </li>
-                                        <li><a href="home-commercial.html">Home Commercial</a>
-                                        </li>
-                                        <li><a href="#">Headers</a>
-                                            <ul class="rd-navbar-dropdown">
-                                                <li><a href="header-default.html">Header Default</a></li>
-                                                <li><a href="header-creative.html">Header Creative</a></li>
-                                                <li><a href="header-transparent.html">Header Transparent</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Footers</a>
-                                            <ul class="rd-navbar-dropdown">
-                                                <li><a href="footer-corporate.html">Footer Corporate</a></li>
-                                                <li><a href="footer-minimal.html">Footer Minimal</a></li>
-                                                <li><a href="footer-modern.html">Footer Modern</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Catalog</a>
-                                    <ul class="rd-navbar-dropdown">
-                                        <li><a href="catalog-list.html">Catalog List</a>
-                                        </li>
-                                        <li><a href="catalog-grid.html">Catalog Grid</a>
-                                        </li>
-                                        <li><a href="single-product.html">Single Product</a>
-                                        </li>
-                                        <li><a href="cart.html">Cart</a>
-                                        </li>
-                                        <li><a href="checkout.html">Checkout</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="rd-navbar-dropdown">
-                                        <li><a href="about.html">About</a>
-                                        </li>
-                                        <li><a href="404-page.html">404 Page</a>
-                                        </li>
-                                        <li><a href="search-results.html">Search Results</a>
-                                        </li>
-                                        <li><a href="coming-soon.html">Coming Soon</a>
-                                        </li>
-                                        <li><a href="privacy-policy.html">Privacy Policy</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Blog</a>
-                                    <ul class="rd-navbar-dropdown">
-                                        <li><a href="#">Post Formats</a>
-                                            <ul class="rd-navbar-dropdown">
-                                                <li><a href="standard-post.html">Standard post</a></li>
-                                                <li><a href="nonstandard-post-with-sidebar.html">Nonstandard post with sidebar</a></li>
-                                                <li><a href="nonstandard-post.html">Nonstandard post</a></li>
-                                                <li><a href="gallery-post.html">Gallery post</a></li>
-                                                <li><a href="image-post.html">Image post</a></li>
-                                                <li><a href="link-post.html">Link post</a></li>
-                                                <li><a href="quote-post.html">Quote post</a></li>
-                                                <li><a href="video-post.html">Video post</a></li>
-                                                <li><a href="audio-post.html">Audio post</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Blog Layouts</a>
-                                            <ul class="rd-navbar-dropdown">
-                                                <li><a href="classic-blog.html">Classic Blog</a></li>
-                                                <li><a href="grid-blog.html">Grid Blog</a></li>
-                                                <li><a href="masonry-blog.html">Masonry Blog</a></li>
-                                                <li><a href="justify-blog.html">Justify Blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Sidebar</a>
-                                            <ul class="rd-navbar-dropdown">
-                                                <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                                                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                                                <li><a href="no-sidebar.html">No Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Elements</a>
-                                    <ul class="rd-navbar-megamenu">
+
+                            @if($menu->get('menu_main'))
+                                <ul class="rd-navbar-nav">
+                                    @foreach($menu->get('menu_main') as $item)
                                         <li>
-                                            <ul class="rd-megamenu-list">
-                                                <li><a href="accordion.html">Accordion</a></li>
-                                                <li><a href="buttons.html">Buttons</a></li>
-                                                <li><a href="typography.html">Typography</a></li>
-                                                <li><a href="testimonials.html">Testimonials</a></li>
-                                            </ul>
+                                            <a href="{{ $item->link }}">{{ $item->name }}</a>
                                         </li>
-                                        <li>
-                                            <ul class="rd-megamenu-list">
-                                                <li><a href="countdown.html">Countdown</a></li>
-                                                <li><a href="animated-counter.html">Animated Counter</a></li>
-                                                <li><a href="number-counter.html">Number Counter</a></li>
-                                                <li><a href="circles-counter.html">Circles Counter</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="rd-megamenu-list">
-                                                <li><a href="pricing-table.html">Pricing Table</a></li>
-                                                <li><a href="tabs.html">Tabs</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="contacts.html">Contacts</a>
-                                </li>
-                            </ul>
+                                    @endforeach
+                                </ul>
+                            @endif
+
                         </div>
                     </div>
                 </div>

@@ -27,7 +27,7 @@ class CheckRedirectDb
         /**
          * @var $existedInDb Redirect
          */
-        $existedInDb = $this->dispatch(new GetRedirectByUriQuery($request->path()));
+        $existedInDb = $this->dispatch(new GetRedirectByUriQuery($request->getRequestUri()));
 
         if ($existedInDb) {
            return redirect($existedInDb->url_new, 301);

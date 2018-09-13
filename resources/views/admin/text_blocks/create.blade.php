@@ -18,6 +18,7 @@
                 @csrf
 
                 @input(['name' => 'name', 'label' => 'Название'])
+                @input(['name' => 'sys_name', 'label' => 'Системное имя'])
                 @textarea(['name' => 'text', 'label' => 'Текст'])
 
                 @submit_btn()

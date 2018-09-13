@@ -11,5 +11,5 @@ class TextBlock extends Model
     /**
      * @var array
      */
-    protected $fillable = ['text', 'name'];
+    protected $fillable = ['text', 'sys_name', 'name'];
 }

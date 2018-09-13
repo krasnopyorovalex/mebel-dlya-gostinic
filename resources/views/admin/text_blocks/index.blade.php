@@ -17,7 +17,7 @@
             <tr class="border-solid">
                 <th>#</th>
                 <th>Название</th>
-                <th>Ссылка</th>
+                <th>Системное имя</th>
                 <th></th>
             </tr>
             </thead>
@@ -26,7 +26,7 @@
                 <tr>
                     <td><span class="label label-primary">{{ $loop->iteration }}</span></td>
                     <td>{{ $textBlock->name }}</td>
-                    <td><span class="label label-primary bg-teal-400">{{ $textBlock->link }}</span></td>
+                    <td><span class="label label-primary bg-teal-400">{{ $textBlock->sys_name }}</span></td>
                     <td>
                         <div>
                             <a href="{{ route('admin.text_blocks.edit', $textBlock) }}"><i class="icon-pencil7"></i></a>
