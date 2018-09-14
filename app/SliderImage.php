@@ -17,8 +17,18 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $ext
  * @property string $is_published
  * @property int $pos
- *
  * @mixin \Eloquent
+ * @property-read \App\Slider $slider
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereAlt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereBasename($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereExt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereIsPublished($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage wherePos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereSliderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\SliderImage whereTitle($value)
  */
 class SliderImage extends Model
 {
@@ -43,5 +53,13 @@ class SliderImage extends Model
     public function getThumb(): string
     {
         return asset('storage/slider/' . $this->slider_id . '/' . $this->basename . '_thumb.' . $this->ext);
+    }
+
+    /**
+     * @return string
+     */
+    public function getImage(): string
+    {
+        return asset('storage/slider/' . $this->slider_id . '/' . $this->basename . '.' . $this->ext);
     }
 }

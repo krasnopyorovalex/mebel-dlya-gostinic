@@ -29,6 +29,6 @@ class GetPageByIdQuery
      */
     public function handle()
     {
-        return Page::with(['image'])->findOrFail($this->id);
+        return Page::findOrFail($this->id);
     }
 }

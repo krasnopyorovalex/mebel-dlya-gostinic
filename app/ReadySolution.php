@@ -9,21 +9,23 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property string $name
+ * @property string $name_image
  * @property string $link
  * @property-read \App\Image $image
- * @method static \Illuminate\Database\Eloquent\Builder|\App\ReadySolution whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\ReadySolution whereLink($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\ReadySolution whereName($value)
  * @mixin \Eloquent
+ * @property string $title
+ * @property string|null $description
+ * @property string|null $keywords
+ * @property string $text
+ * @property string $alias
+ * @property string $is_published
  */
 class ReadySolution extends Model
 {
-    public $timestamps = false;
-
     /**
      * @var array
      */
-    protected $fillable = ['link', 'name'];
+    protected $fillable = ['name', 'name_image', 'title', 'description', 'keywords', 'text', 'alias', 'is_published'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne

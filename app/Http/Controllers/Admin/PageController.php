@@ -7,6 +7,7 @@ use App\Domain\Page\Commands\DeletePageCommand;
 use App\Domain\Page\Commands\UpdatePageCommand;
 use App\Domain\Page\Queries\GetAllPagesQuery;
 use App\Domain\Page\Queries\GetPageByIdQuery;
+use App\Domain\Slider\Queries\GetAllSlidersQuery;
 use App\Http\Controllers\Controller;
 use Domain\Page\Requests\CreatePageRequest;
 use Domain\Page\Requests\UpdatePageRequest;
@@ -38,7 +39,11 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.create');
+        $sliders = $this->dispatch(new GetAllSlidersQuery());
+
+        return view('admin.pages.create', [
+            'sliders' => $sliders
+        ]);
     }
 
     /**
@@ -63,9 +68,11 @@ class PageController extends Controller
     public function edit($id)
     {
         $page = $this->dispatch(new GetPageByIdQuery($id));
+        $sliders = $this->dispatch(new GetAllSlidersQuery());
 
         return view('admin.pages.edit', [
-            'page' => $page
+            'page' => $page,
+            'sliders' => $sliders
         ]);
     }
 

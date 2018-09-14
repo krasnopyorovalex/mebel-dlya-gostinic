@@ -22,6 +22,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::include('includes.imageInput', 'imageInput');
         Blade::include('includes.dateInput', 'dateInput');
         Blade::include('includes.selectLink', 'selectLink');
+        Blade::include('includes.select', 'select');
 
         Carbon::serializeUsing(function ($carbon) {
             return $carbon->setLocale('ru');

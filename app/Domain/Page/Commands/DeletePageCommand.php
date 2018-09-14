@@ -2,7 +2,6 @@
 
 namespace App\Domain\Page\Commands;
 
-use App\Domain\Image\Commands\DeleteImageCommand;
 use App\Domain\Page\Queries\GetPageByIdQuery;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -37,10 +36,6 @@ class DeletePageCommand
     public function handle(): bool
     {
         $page = $this->dispatch(new GetPageByIdQuery($this->id));
-
-        if($page->image) {
-            $this->dispatch(new DeleteImageCommand($page->image));
-        }
 
         return $page->delete();
     }

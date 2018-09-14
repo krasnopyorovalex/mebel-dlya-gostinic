@@ -31,13 +31,16 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereUpdatedAt($value)
+ * @property int|null $slider_id
+ * @property-read \App\Slider|null $slider
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereSliderId($value)
  */
 class Page extends Model
 {
     /**
      * @var array
      */
-    protected $fillable = ['name', 'title', 'description', 'keywords', 'text', 'alias', 'is_published'];
+    protected $fillable = ['slider_id', 'name', 'title', 'description', 'keywords', 'text', 'alias', 'is_published'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
@@ -45,5 +48,13 @@ class Page extends Model
     public function image()
     {
         return $this->morphOne('App\Image', 'imageable');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function slider()
+    {
+        return $this->belongsTo('App\Slider');
     }
 }

@@ -29,6 +29,8 @@ class GetPageByAliasQuery
      */
     public function handle()
     {
-        return Page::with(['image'])->where('alias', $this->alias)->firstOrFail();
+        return Page::with(['slider' => function ($query) {
+            return $query->with(['images']);
+        }])->where('alias', $this->alias)->firstOrFail();
     }
 }

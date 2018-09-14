@@ -27,12 +27,19 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="main">
 
-                            @selectLink(['name' => 'link', 'label' => 'Ссылка', 'entity' => $readySolution])
                             @input(['name' => 'name', 'label' => 'Название', 'entity' => $readySolution])
+                            @input(['name' => 'name_image', 'label' => 'Название на картинке', 'entity' => $readySolution])
+                            @input(['name' => 'title', 'label' => 'Title', 'entity' => $readySolution])
+                            @input(['name' => 'description', 'label' => 'Description', 'entity' => $readySolution])
+                            @input(['name' => 'keywords', 'label' => 'Keywords', 'entity' => $readySolution])
+
+                            @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $readySolution])
+                            @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $readySolution])
+                            @checkbox(['name' => 'in_main', 'label' => 'Отображать на главной?', 'entity' => $readySolution])
+                            @checkbox(['name' => 'is_published', 'label' => 'Опубликовано?', 'entity' => $readySolution])
 
                             @submit_btn()
                         </div>
-
                         <div class="tab-pane" id="image">
                             @if ($readySolution->image)
                                 <div class="panel panel-flat border-blue border-xs" id="image__box">
@@ -56,8 +63,10 @@
 
         </div>
     </div>
-@if ($readySolution->image)
-    @include('layouts.partials._image_attributes_popup', ['image' => $readySolution->image])
-@endif
-
+    @push('scripts')
+        <script src="{{ asset('dashboard/laravel-ckeditor/ckeditor.js') }}"></script>
+    @endpush
+    @if ($readySolution->image)
+        @include('layouts.partials._image_attributes_popup', ['image' => $readySolution->image])
+    @endif
 @endsection

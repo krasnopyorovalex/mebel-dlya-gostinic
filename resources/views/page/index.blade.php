@@ -5,67 +5,8 @@
 @section('keywords', $page->keywords)
 
 @section('content')
-    <section>
-        <div class="swiper-container swiper-slider" data-simulate-touch="false" data-loop="false" data-autoplay="false">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide bg-gray-lighter" data-slide-bg="images/slider-slide-4-1920x980.jpg">
-                    <div class="swiper-slide-caption text-center">
-                        <div class="container">
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-7">
-                                    <div class="swiper-decor">
-                                        <h1 data-caption-animate="fadeInUpSmall"><span>design</span></h1>
-                                    </div>
-                                    <!--h4(data-caption-animate='fadeInUpSmall') Best lighting for Your Kids’ Room is Now on Sale!-->
-                                    <!--h2(data-caption-animate='fadeInUpSmall', data-caption-delay='200')-->
-                                    <!--  | Up to 50% off!-->
-                                    <!--a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='catalog-grid.html') SHOP NOW!-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide bg-gray-lighter" data-slide-bg="images/slider-slide-3-1920x980.jpg">
-                    <div class="swiper-slide-caption text-left">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="swiper-decor">
-                                        <h1 data-caption-animate="fadeInLeftSmall"><span>Interior</span></h1>
-                                    </div>
-                                    <!--h4(data-caption-animate='fadeInUpSmall', data-caption-delay='200') ... when buying kitchen tables!-->
-                                    <!--.group-lg.group-middle-->
-                                    <!--  a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='catalog-grid.html') VIEW ALL PRODUCTS-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide bg-gray-lighter" data-slide-bg="images/slider-slide-1-1920x980.jpg">
-                    <div class="swiper-slide-caption text-right">
-                        <div class="container">
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-12">
-                                    <div class="swiper-decor">
-                                        <h1 data-caption-animate="fadeInRightSmall"><span>Furniture</span></h1>
-                                    </div>
-                                    <!--h2(data-caption-animate='fadeInUpSmall') If Your Purchase is Over $250-->
-                                    <!--h4.block-centered(data-caption-animate='fadeInUpSmall', data-caption-delay='200') We'll Give You a FREE Delivery!-->
-                                    <!--.group-lg.group-middle-->
-                                    <!--  a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='catalog-grid.html') SHOP NOW!-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Swiper Pagination-->
-            <div class="swiper-pagination"></div>
-            <!-- Swiper Navigation-->
-            <div class="swiper-button-prev linear-icon-chevron-left"></div>
-            <div class="swiper-button-next linear-icon-chevron-right"></div>
-        </div>
-    </section>
+
+    @includeWhen($page->slider, 'layouts.partials.slider', ['page' => $page])
 
     <section class="section-sm section-limit">
         <div class="row justify-content-sm-center row-50">

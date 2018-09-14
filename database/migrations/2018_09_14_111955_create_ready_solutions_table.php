@@ -15,8 +15,16 @@ class CreateReadySolutionsTable extends Migration
     {
         Schema::create('ready_solutions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 255);
-            $table->string('link', 127);
+            $table->string('name', 512);
+            $table->string('name_image', 255)->nullable();
+            $table->string('title', 512);
+            $table->string('description', 512)->nullable();
+            $table->string('keywords', 512)->nullable();
+            $table->text('text');
+            $table->string('alias', 255)->unique();
+            $table->enum('in_main',[0,1])->default(1);
+            $table->enum('is_published',[0,1])->default(1);
+            $table->timestamps();
         });
     }
 

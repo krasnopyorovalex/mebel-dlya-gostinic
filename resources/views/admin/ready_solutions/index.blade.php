@@ -17,7 +17,8 @@
             <tr class="border-solid">
                 <th>#</th>
                 <th>Название</th>
-                <th>Ссылка</th>
+                <th>Alias</th>
+                <th>Обновлено</th>
                 <th></th>
             </tr>
             </thead>
@@ -26,7 +27,8 @@
                 <tr>
                     <td><span class="label label-primary">{{ $loop->iteration }}</span></td>
                     <td>{{ $readySolution->name }}</td>
-                    <td><span class="label label-primary bg-teal-400">{{ $readySolution->link }}</span></td>
+                    <td><span class="label label-primary bg-teal-400">{{ $readySolution->alias }}</span></td>
+                    <td><span class="label label-primary">{{ $readySolution->updated_at->diffForHumans() }}</span></td>
                     <td>
                         <div>
                             <a href="{{ route('admin.ready_solutions.edit', $readySolution) }}"><i class="icon-pencil7"></i></a>

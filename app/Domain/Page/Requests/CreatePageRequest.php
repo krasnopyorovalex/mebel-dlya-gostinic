@@ -20,7 +20,8 @@ class CreatePageRequest extends Request
             'text' => 'required|string',
             'alias' => 'required|max:255|unique:pages',
             'is_published' => 'digits_between:0,1',
-            'image' => 'image'
+            'image' => 'image',
+            'slider_id' => 'integer|exists:sliders,id|nullable'
         ];
     }
 

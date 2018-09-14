@@ -27,7 +27,8 @@ class UpdatePageRequest extends Request
                 'required',
                 'max:255',
                 Rule::unique('pages')->ignore($this->id)
-            ]
+            ],
+            'slider_id' => 'integer|exists:sliders,id|nullable'
         ];
     }
 
