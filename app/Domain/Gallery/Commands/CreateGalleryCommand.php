@@ -27,10 +27,10 @@ class CreateGalleryCommand
      */
     public function handle(): bool
     {
-        $page = new Gallery();
-        $page->fill($this->request->all());
+        $gallery = new Gallery();
+        $gallery->fill($this->request->all());
 
-        return $page->save();
+        return $gallery->save();
     }
 
 }

@@ -56,22 +56,16 @@
                     <div class="rd-navbar-panel rd-navbar-search_collapsable">
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                         <!-- RD Navbar Brand-->
-                        <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img src="images/logo-140x44.png" alt="" width="140" height="44"/></a></div>
+                        <div class="rd-navbar-brand"><a class="brand-name" href="{{ route('page.show') }}"><img src="{{ asset('images/logo-140x44.png') }}" alt="" width="140" height="44"/></a></div>
                     </div>
                     <!-- RD Navbar Nav-->
                     <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
                         <div class="rd-navbar-search_collapsable">
-
-                            @if($menu->get('menu_main'))
-                                <ul class="rd-navbar-nav">
-                                    @foreach($menu->get('menu_main') as $item)
-                                        <li>
-                                            <a href="{{ $item->link }}">{{ $item->name }}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            @endif
-
+                            @includeWhen($menu->get('menu_main'), 'layouts.partials.header_menu', ['menu' => $menu])
+                            <div class="sticky__contacts">
+                                {!! $textBlocks->get('header_phones') !!}
+                            </div>
+                            <!-- /.sticky__contacts -->
                         </div>
                     </div>
                 </div>

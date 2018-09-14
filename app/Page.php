@@ -21,6 +21,16 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \App\Image $image
  * @property string $is_published
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereIsPublished($value)
+ * @property string|null $keywords
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereAlias($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereKeywords($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereUpdatedAt($value)
  */
 class Page extends Model
 {

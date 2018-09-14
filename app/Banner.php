@@ -4,6 +4,22 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Banner
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $text
+ * @property string $link
+ * @property string $btn_text
+ * @property-read \App\Image $image
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Banner whereBtnText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Banner whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Banner whereLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Banner whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Banner whereText($value)
+ * @mixin \Eloquent
+ */
 class Banner extends Model
 {
     public $timestamps = false;

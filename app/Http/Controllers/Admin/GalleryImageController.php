@@ -14,6 +14,10 @@ use Domain\GalleryImage\Requests\CreateGalleryImageRequest;
 use Domain\GalleryImage\Requests\UpdateGalleryImageRequest;
 use Illuminate\Http\Request;
 
+/**
+ * Class GalleryImageController
+ * @package App\Http\Controllers\Admin
+ */
 class GalleryImageController extends Controller
 {
     /**

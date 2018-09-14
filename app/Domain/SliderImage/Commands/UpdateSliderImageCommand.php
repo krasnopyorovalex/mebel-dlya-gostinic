@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Domain\Gallery\Commands;
+namespace App\Domain\SliderImage\Commands;
 
-use App\Domain\Gallery\Queries\GetGalleryByIdQuery;
+use App\Domain\SliderImage\Queries\GetSliderImageByIdQuery;
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
- * Class UpdateGalleryCommand
- * @package App\Domain\Gallery\Commands
+ * Class UpdateSliderImageCommand
+ * @package App\Domain\SliderImage\Commands
  */
-class UpdateGalleryCommand
+class UpdateSliderImageCommand
 {
 
     use DispatchesJobs;
@@ -19,7 +19,7 @@ class UpdateGalleryCommand
     private $id;
 
     /**
-     * UpdateGalleryCommand constructor.
+     * UpdateSliderImageCommand constructor.
      * @param int $id
      * @param Request $request
      */
@@ -34,9 +34,9 @@ class UpdateGalleryCommand
      */
     public function handle(): bool
     {
-        $gallery = $this->dispatch(new GetGalleryByIdQuery($this->id));
+        $image = $this->dispatch(new GetSliderImageByIdQuery($this->id));
 
-        return $gallery->update($this->request->all());
+        return $image->update($this->request->all());
     }
 
 }
