@@ -51,6 +51,9 @@ class CatalogProduct extends Model
         return $this->hasOne('App\Catalog', 'id', 'catalog_id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function relativeProducts()
     {
         return $this->belongsToMany(CatalogProduct::class, 'catalog_product_relatives', 'product_id', 'product_relative_id');

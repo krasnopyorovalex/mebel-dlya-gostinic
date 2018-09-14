@@ -35,6 +35,8 @@ class CreateReadySolutionCommand
         $readySolution->fill($this->request->all());
         $readySolution->save();
 
+        $readySolution->relativeProducts()->attach($this->request->post('products'));
+
         if($this->request->has('image')) {
             return $this->dispatch(new UploadImageCommand($this->request, $readySolution->id, ReadySolution::class));
         }

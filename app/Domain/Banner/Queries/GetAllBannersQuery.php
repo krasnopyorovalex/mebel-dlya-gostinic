@@ -15,6 +15,6 @@ class GetAllBannersQuery
      */
     public function handle()
     {
-        return Banner::all();
+        return Banner::with(['image'])->get();
     }
 }

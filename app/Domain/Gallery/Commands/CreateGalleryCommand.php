@@ -2,7 +2,10 @@
 
 namespace App\Domain\Gallery\Commands;
 
+use App\Domain\Image\Commands\UploadImageCommand;
 use App\Gallery;
+use App\Http\Requests\Request;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
  * Class CreateGalleryCommand
@@ -10,14 +13,15 @@ use App\Gallery;
  */
 class CreateGalleryCommand
 {
+    use DispatchesJobs;
 
     private $request;
 
     /**
      * CreateGalleryCommand constructor.
-     * @param $request
+     * @param Request $request
      */
-    public function __construct($request)
+    public function __construct(Request $request)
     {
         $this->request = $request;
     }
@@ -29,8 +33,13 @@ class CreateGalleryCommand
     {
         $gallery = new Gallery();
         $gallery->fill($this->request->all());
+        $gallery->save();
 
-        return $gallery->save();
+        if ($this->request->has('image')) {
+            return $this->dispatch(new UploadImageCommand($this->request, $gallery->id, Gallery::class));
+        }
+
+        return true;
     }
 
 }

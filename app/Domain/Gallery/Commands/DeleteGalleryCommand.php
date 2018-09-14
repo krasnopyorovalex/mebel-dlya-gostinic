@@ -3,6 +3,7 @@
 namespace App\Domain\Gallery\Commands;
 
 use App\Domain\Gallery\Queries\GetGalleryByIdQuery;
+use App\Domain\Image\Commands\DeleteImageCommand;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
@@ -35,6 +36,10 @@ class DeleteGalleryCommand
         $gallery = $this->dispatch(new GetGalleryByIdQuery($this->id));
 
         \Storage::deleteDirectory('public/gallery/' . $this->id);
+
+        if ($gallery->image) {
+            $this->dispatch(new DeleteImageCommand($gallery->image));
+        }
 
         return $gallery->delete();
     }

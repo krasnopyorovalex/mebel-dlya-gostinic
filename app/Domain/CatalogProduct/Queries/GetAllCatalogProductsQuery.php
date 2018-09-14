@@ -12,19 +12,16 @@ use App\CatalogProduct;
  */
 class GetAllCatalogProductsQuery
 {
-    /**
-     * @var int
-     */
     private $catalog;
 
     private $excludedId;
 
     /**
      * GetAllCatalogProductsQuery constructor.
-     * @param int $catalog
+     * @param null $catalog
      * @param null $excludedId
      */
-    public function __construct(int $catalog, $excludedId = null)
+    public function __construct($catalog = null, $excludedId = null)
     {
         $this->catalog = $catalog;
         $this->excludedId = $excludedId;
@@ -35,7 +32,11 @@ class GetAllCatalogProductsQuery
      */
     public function handle()
     {
-        $query = CatalogProduct::with(['catalog'])->where('catalog_id', $this->catalog)->orderBy('pos');
+        $query = CatalogProduct::with(['catalog'])->orderBy('pos');
+
+        if ($this->catalog) {
+            $query->where('catalog_id', $this->catalog);
+        }
 
         if ($this->excludedId) {
             $query->where('id', '<>', $this->excludedId);

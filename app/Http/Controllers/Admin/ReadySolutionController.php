@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Domain\CatalogProduct\Queries\GetAllCatalogProductsQuery;
 use App\Domain\ReadySolution\Commands\CreateReadySolutionCommand;
 use App\Domain\ReadySolution\Commands\DeleteReadySolutionCommand;
 use App\Domain\ReadySolution\Commands\UpdateReadySolutionCommand;
@@ -63,9 +64,14 @@ class ReadySolutionController extends Controller
     public function edit($id)
     {
         $readySolution = $this->dispatch(new GetReadySolutionByIdQuery($id));
+        $catalogProducts = $this->dispatch(new GetAllCatalogProductsQuery());
+
+        $rsProductRelatives = get_ids_from_array($readySolution->relativeProducts->toArray());
 
         return view('admin.ready_solutions.edit', [
-            'readySolution' => $readySolution
+            'readySolution' => $readySolution,
+            'catalogProducts' => $catalogProducts,
+            'rsProductRelatives' => $rsProductRelatives
         ]);
     }
 

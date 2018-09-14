@@ -8,391 +8,79 @@
 
     @includeWhen($page->slider, 'layouts.partials.slider', ['page' => $page])
 
-    <section class="section-sm section-limit">
-        <div class="row justify-content-sm-center row-50">
-            <div class="col-md-4">
-                <div class="banner-thumbnail banner-thumbnail-top"><a href="catalog-grid.html"><img src="images/banner-2-573x432.jpg" alt="" width="573" height="432"/></a></div>
-            </div>
-            <div class="col-md-4">
-                <div class="banner-thumbnail banner-thumbnail-center"><a href="catalog-grid.html"><img src="images/banner-4-573x432.jpg" alt="" width="573" height="432"/></a></div>
-            </div>
-            <div class="col-md-4">
-                <div class="banner-thumbnail banner-thumbnail-center"><a href="catalog-grid.html"><img src="images/banner-3-573x432.jpg" alt="" width="573" height="432"/></a></div>
-            </div>
-        </div>
-    </section>
-    <section class="section-lg bg-default">
-        <div class="container text-center">
-            <h4>Furniture on Fire - Hot Sales!</h4>
-            <!-- Owl Carousel-->
-            <div class="owl-carousel carousel-product" data-items="1" data-md-items="2" data-lg-items="3" data-xl-items="4" data-stage-padding="0" data-loop="false" data-margin="50" data-mouse-drag="false" data-nav="true">
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/italian-furniture-contemporary-mix-steel-base-wooden-table-top-dining-table-by-sedit-2-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Italian Furniture Contemporary Yellow Club Chair</a></h6>
-                            <p class="product-price"><span>87</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/modern-small-cucciolo-2-seater-sofa-domingo-salotti-1-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">The Natural Light White Square Table Lamp</a></h6>
-                            <p class="product-price"><span>16</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/my-italian-living-contemporary-manila-leather-blue-dining-chair-by-imperial-line-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Hobo Design Coup Grey Office Chair</a></h6>
-                            <p class="product-price"><span>44</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                            <ul class="rating-list">
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-gray-4"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/Porta-venezia-kitchen-bar-dining-stool-by-infiniti-design-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Modern Furniture Lucinda Orange Stacking Chair</a></h6>
-                            <p class="product-price"><span>82</span>
-                            </p><a class="button-gray-light-outline button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-magic-wand icon-gray"></span><span>Select options</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/santarossa_plastic_transparent_glossy_chair-1-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Coriander Designs Clarke Wood Lounge Chair</a></h6>
-                            <p class="product-price"><span>40</span>
-                            </p><a class="button-gray-light-outline button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-magic-wand icon-gray"></span><span>Select options</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/slamp-lighting-italain-designer-floor-lamp-contemporary-design-1-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">CB2 Furniture Modern White Hi-Gloss Desk</a></h6>
-                            <p class="product-price"><span>43</span>
-                            </p><a class="button-gray-light-outline button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-magic-wand icon-gray"></span><span>Select options</span></a>
-                            <ul class="rating-list">
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-gray-4"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/garda-square-sideboard-for-living-and-dining-room-by-dallagnese-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span class="featured">Featured</span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Larssen Design Black and White Retro Egg Chair</a></h6>
-                            <p class="product-price"><span>48</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                            <ul class="rating-list">
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-gray-4"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/emma-chairs-and-table-for-kitchen-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span class="new">New</span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">EcoFurniture White Leather Office Chair</a></h6>
-                            <p class="product-price"><span>69</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-limit bg-gray-lighter bg-image bg-image-8">
+    @includeWhen($readySolutions, 'layouts.partials.ready_solutions', ['readySolutions' => $readySolutions])
+
+    @includeWhen($countAbout, 'layouts.partials.count_about', ['countAbout' => $countAbout])
+
+    <section class="section-limit bg-gray-lighter bg-image css__custom-banner" style="background-image: url({{ $banners->get(1)->image->path }})">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-lg-5 section-lg">
-                    <h2 class="wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration="1.2s">Get our Catalogue</h2>
-                    <p class="big wow fadeInUpSmall" data-wow-delay=".5s" data-wow-duration="1.2s">Receive free monthly catalogue showcasing the best in modern furniture design!</p><a class="banner-link wow fadeInUpSmall" href="catalog-grid.html" data-wow-delay=".7s" data-wow-duration="1.2s">Shop now!</a>
+                    <div class="wow fadeInUpSmall heading-2" data-wow-delay=".2s" data-wow-duration="1.2s">{{ $banners->get(1)->name }}</div>
+                    <p class="big wow fadeInUpSmall" data-wow-delay=".5s" data-wow-duration="1.2s">{{ strip_tags($banners->get(1)->text) }}</p>
+                    <a class="banner-link wow fadeInUpSmall" href="{{ $banners->get(1)->link }}" data-wow-delay=".7s" data-wow-duration="1.2s">{{ $banners->get(1)->btn_text }}</a>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="section-lg bg-default">
         <div class="container text-center">
-            <h4>Most Popular Items</h4>
-            <!-- Owl Carousel-->
-            <div class="owl-carousel carousel-product" data-items="1" data-md-items="2" data-lg-items="3" data-xl-items="4" data-stage-padding="0" data-loop="false" data-margin="50" data-mouse-drag="false" data-nav="true">
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/santarossa_plastic_transparent_glossy_chair-1-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Coriander Designs Clarke Wood Lounge Chair</a></h6>
-                            <p class="product-price"><span>40</span>
-                            </p><a class="button-gray-light-outline button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-magic-wand icon-gray"></span><span>Select options</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/slamp-lighting-italain-designer-floor-lamp-contemporary-design-1-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">CB2 Furniture Modern White Hi-Gloss Desk</a></h6>
-                            <p class="product-price"><span>43</span>
-                            </p><a class="button-gray-light-outline button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-magic-wand icon-gray"></span><span>Select options</span></a>
-                            <ul class="rating-list">
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-gray-4"></span></li>
-                            </ul>
+            <div class="heading-4">
+                <a href="{{ route('page.show', ['alias' => 'catalog']) }}">Каталог мебели</a>
+            </div>
+            <!-- Bootstrap tabs-->
+            <div class="tabs-custom tabs-vertical row no-gutters">
+                <!-- Nav tabs-->
+                <ul class="nav nav-tabs nav-custom nav-custom-tabs col-md-3">
+                    @foreach ($catalogs as $catalog)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('catalog.show', ['alias' => $catalog->alias]) }}">{{ $catalog->name }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+                <div class="tab-content text-left col-md-9">
+                    <div class="tab-pane fade show active">
+                        <!-- Owl Carousel-->
+                        <div class="owl-carousel carousel-product" data-items="1" data-md-items="1" data-lg-items="2" data-xl-items="3" data-stage-padding="0" data-loop="false" data-margin="50" data-mouse-drag="false" data-nav="true">
+                            @foreach ($catalogs as $catalog)
+                            <div class="item">
+                                <div class="product product-grid">
+                                    <div class="product-img-wrap">
+                                        <a href="{{ route('catalog.show', ['alias' => $catalog->alias]) }}">
+                                            <img src="{{ $catalog->image->path }}" alt="{{ $catalog->image->alt }}" title="{{ $catalog->image->title }}" width="300" height="300"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-caption">
+                                        <p>{{ $catalog->sub_title }}</p>
+                                        <div class="product-title heading-6"><a href="{{ route('catalog.show', ['alias' => $catalog->alias]) }}">{{ $catalog->name }}</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/garda-square-sideboard-for-living-and-dining-room-by-dallagnese-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span class="featured">Featured</span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Larssen Design Black and White Retro Egg Chair</a></h6>
-                            <p class="product-price"><span>48</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                            <ul class="rating-list">
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-gray-4"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/emma-chairs-and-table-for-kitchen-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span class="new">New</span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">EcoFurniture White Leather Office Chair</a></h6>
-                            <p class="product-price"><span>69</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/italian-furniture-contemporary-mix-steel-base-wooden-table-top-dining-table-by-sedit-2-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Italian Furniture Contemporary Yellow Club Chair</a></h6>
-                            <p class="product-price"><span>87</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/modern-small-cucciolo-2-seater-sofa-domingo-salotti-1-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">The Natural Light White Square Table Lamp</a></h6>
-                            <p class="product-price"><span>16</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/my-italian-living-contemporary-manila-leather-blue-dining-chair-by-imperial-line-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Hobo Design Coup Grey Office Chair</a></h6>
-                            <p class="product-price"><span>44</span>
-                            </p><a class="button-black button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-cart"></span><span>Add to cart</span></a>
-                            <ul class="rating-list">
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-secondary-4"></span></li>
-                                <li><span class="icon linear-icon-star icon-gray-4"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product product-grid">
-                        <div class="product-img-wrap"><img src="images/Porta-venezia-kitchen-bar-dining-stool-by-infiniti-design-300x300.jpg" alt="" width="300" height="300"/>
-                            <div class="product-icon-wrap"><span class="icon icon-md linear-icon-heart" data-toggle="tooltip" data-original-title="Add to Wishlist"></span><span class="icon icon-md linear-icon-balance" data-toggle="tooltip" data-original-title="Add to Compare"></span></div>
-                            <div class="product-label-wrap"><span></span></div>
-                        </div>
-                        <div class="product-caption">
-                            <ul class="product-categories">
-                                <li><a href="#">Living Room</a></li>
-                                <li><a href="#">Dining room</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                            </ul>
-                            <h6 class="product-title"><a href="single-product.html">Modern Furniture Lucinda Orange Stacking Chair</a></h6>
-                            <p class="product-price"><span>82</span>
-                            </p><a class="button-gray-light-outline button button-icon button-icon-left" href="single-product.html"><span class="icon icon-md linear-icon-magic-wand icon-gray"></span><span>Select options</span></a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="recall__me">
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" class="name__filed form-input" value="" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+                <input type="email" class="email__field form-input" value="" placeholder="Ваше e-mail">
+            </div>
+            <div class="form-group">
+                <button class="button button-black" type="submit">Отправить</button>
+            </div>
+        </form>
+    </section>
+    <!-- /.recall__me -->
+
     <!-- Divider-->
     <div class="container">
         <div class="divider"></div>
@@ -400,55 +88,27 @@
 
     <section class="section-lg bg-default text-center">
         <div class="container">
-            <h4>Top Furniture Categories</h4>
+            <div class="heading-4"><a href="{{ route('page.show', ['alias' => 'gallery']) }}">Наши работы</a></div>
             <div class="row row-60">
-                <div class="col-md-6 col-xl-3">
-                    <!-- Thumb corporate-->
-                    <div class="thumb thumb-corporate">
-                        <div class="thumb-corporate__main"><img src="images/categories-1-301x301.jpg" alt="" width="301" height="301"/>
-                        </div>
-                        <div class="thumb-corporate__caption">
-                            <p class="thumb__title"><a href="catalog-grid.html">Living Room</a></p>
-                            <p class="thumb__subtitle">25 products</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3">
-                    <!-- Thumb corporate-->
-                    <div class="thumb thumb-corporate">
-                        <div class="thumb-corporate__main"><img src="images/categories-2-301x301.jpg" alt="" width="301" height="301"/>
-                        </div>
-                        <div class="thumb-corporate__caption">
-                            <p class="thumb__title"><a href="catalog-grid.html">Dining room</a></p>
-                            <p class="thumb__subtitle">25 products</p>
+                @foreach ($galleries as $gallery)
+                    <div class="col-md-6 col-xl-3">
+                        <!-- Thumb corporate-->
+                        <div class="thumb thumb-corporate">
+                            <div class="thumb-corporate__main">
+                                <a href="{{ route('page.show', ['alias' => 'gallery']) }}#{{ $gallery->id }}">
+                                    <img src="{{ $gallery->image->path }}" alt="{{ $gallery->image->alt }}" title="{{ $gallery->image->title }}" width="301" height="301"/>
+                                </a>
+                            </div>
+                            <div class="thumb-corporate__caption">
+                                <p class="thumb__title"><a href="{{ route('page.show', ['alias' => 'gallery']) }}#{{ $gallery->id }}">{{ $gallery->name }}</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-xl-3">
-                    <!-- Thumb corporate-->
-                    <div class="thumb thumb-corporate">
-                        <div class="thumb-corporate__main"><img src="images/categories-3-301x301.jpg" alt="" width="301" height="301"/>
-                        </div>
-                        <div class="thumb-corporate__caption">
-                            <p class="thumb__title"><a href="catalog-grid.html">Bedroom</a></p>
-                            <p class="thumb__subtitle">25 products</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3">
-                    <!-- Thumb corporate-->
-                    <div class="thumb thumb-corporate">
-                        <div class="thumb-corporate__main"><img src="images/categories-4-301x301.jpg" alt="" width="301" height="301"/>
-                        </div>
-                        <div class="thumb-corporate__caption">
-                            <p class="thumb__title"><a href="catalog-grid.html">Office</a></p>
-                            <p class="thumb__subtitle">25 products</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
+
     <!-- Divider-->
     <div class="container">
         <div class="divider"></div>

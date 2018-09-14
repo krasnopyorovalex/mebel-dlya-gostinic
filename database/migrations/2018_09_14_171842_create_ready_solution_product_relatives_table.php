@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCatalogProductRelativesTable extends Migration
+class CreateReadySolutionProductRelativesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateCatalogProductRelativesTable extends Migration
      */
     public function up()
     {
-        Schema::create('catalog_product_relatives', function (Blueprint $table) {
+        Schema::create('rs_product_relatives', function (Blueprint $table) {
+            $table->unsignedInteger('rs_id');
             $table->unsignedInteger('product_id');
-            $table->unsignedInteger('product_relative_id');
 
-            //$table->index(['product_id', 'product_relative_id']);
-            $table->primary(['product_id', 'product_relative_id']);
+            $table->primary(['rs_id', 'product_id']);
 
+            $table->foreign('rs_id')->references('id')->on('ready_solutions')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('catalog_products')->onDelete('cascade');
-            $table->foreign('product_relative_id')->references('id')->on('catalog_products')->onDelete('cascade');
         });
     }
 
@@ -32,6 +31,6 @@ class CreateCatalogProductRelativesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catalog_product_relatives');
+        Schema::dropIfExists('rs_product_relatives');
     }
 }

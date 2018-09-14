@@ -36,6 +36,7 @@
                             </div>
 
                             @input(['name' => 'name', 'label' => 'Название', 'entity' => $catalog])
+                            @input(['name' => 'sub_title', 'label' => 'Подзаголовок для карусели', 'entity' => $catalog])
                             @input(['name' => 'title', 'label' => 'Title', 'entity' => $catalog])
                             @input(['name' => 'description', 'label' => 'Description', 'entity' => $catalog])
                             @input(['name' => 'keywords', 'label' => 'Keywords', 'entity' => $catalog])

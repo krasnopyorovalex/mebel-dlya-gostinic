@@ -23,6 +23,7 @@ Route::group(['middleware' => ['redirector']], function () {
     Route::get('services/{alias}', 'ServiceController@show')->name('service.show');
     Route::get('catalogs/{alias}', 'CatalogController@show')->name('catalog.show');
     Route::get('product/{alias}', 'CatalogProductController@show')->name('catalog_product.show');
+    Route::get('ready-solutions/{alias}', 'ReadySolutionController@show')->name('ready_solution.show');
 });
 
 Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], function () {

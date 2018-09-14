@@ -36,13 +36,13 @@ class DeleteReadySolutionCommand
      */
     public function handle(): bool
     {
-        $ReadySolution = $this->dispatch(new GetReadySolutionByIdQuery($this->id));
+        $readySolution = $this->dispatch(new GetReadySolutionByIdQuery($this->id));
 
-        if($ReadySolution->image) {
-            $this->dispatch(new DeleteImageCommand($ReadySolution->image));
+        if($readySolution->image) {
+            $this->dispatch(new DeleteImageCommand($readySolution->image));
         }
 
-        return $ReadySolution->delete();
+        return $readySolution->delete();
     }
 
 }

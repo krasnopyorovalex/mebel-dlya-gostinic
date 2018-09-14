@@ -3,6 +3,9 @@
 namespace App\Domain\Gallery\Commands;
 
 use App\Domain\Gallery\Queries\GetGalleryByIdQuery;
+use App\Domain\Image\Commands\DeleteImageCommand;
+use App\Domain\Image\Commands\UploadImageCommand;
+use App\Gallery;
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -35,6 +38,13 @@ class UpdateGalleryCommand
     public function handle(): bool
     {
         $gallery = $this->dispatch(new GetGalleryByIdQuery($this->id));
+
+        if ($this->request->has('image')) {
+            if ($gallery->image) {
+                $this->dispatch(new DeleteImageCommand($gallery->image));
+            }
+            $this->dispatch(new UploadImageCommand($this->request, $gallery->id, Gallery::class));
+        }
 
         return $gallery->update($this->request->all());
     }

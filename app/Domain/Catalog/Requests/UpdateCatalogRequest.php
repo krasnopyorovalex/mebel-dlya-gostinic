@@ -14,10 +14,11 @@ class UpdateCatalogRequest extends Request
     public function rules(): array
     {
         return [
-            'name' => 'bail|required|max:512',
-            'title' => 'required|max:512',
-            'description' => 'max:512|nullable',
-            'keywords' => 'max:512|nullable',
+            'name' => 'bail|string|required|max:512',
+            'title' => 'required|string|max:512',
+            'sub_title' => 'string|max:255|nullable',
+            'description' => 'max:512|string|nullable',
+            'keywords' => 'max:512|string|nullable',
             'text' => 'required|string',
             'is_published' => 'digits_between:0,1',
             'image' => 'image',
@@ -27,6 +28,7 @@ class UpdateCatalogRequest extends Request
             'parent_id' => 'numeric|exists:catalogs,id|nullable',
             'alias' => [
                 'required',
+                'string',
                 'max:255',
                 Rule::unique('catalogs')->ignore($this->id)
             ]

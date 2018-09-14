@@ -20,10 +20,11 @@
 
                     <div class="tab-content">
                         <div class="tab-pane active" id="main">
-                            <form action="{{ route('admin.galleries.store') }}" method="post">
+                            <form action="{{ route('admin.galleries.store') }}" method="post" enctype="multipart/form-data">
                                 @csrf
 
                                 @input(['name' => 'name', 'label' => 'Название'])
+                                @imageInput(['name' => 'image', 'type' => 'file', 'label' => 'Выберите изображение на компьютере'])
                                 @checkbox(['name' => 'publish', 'label' => 'Опубликовано?', 'isChecked' => true])
 
                                 @submit_btn()

@@ -19,6 +19,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $text
  * @property string $alias
  * @property string $is_published
+ * @property string $in_main
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ReadySolution forMain()
  */
 class ReadySolution extends Model
 {
@@ -33,5 +37,22 @@ class ReadySolution extends Model
     public function image()
     {
         return $this->morphOne('App\Image', 'imageable');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function relativeProducts()
+    {
+        return $this->belongsToMany(CatalogProduct::class, 'rs_product_relatives', 'rs_id', 'product_id');
+    }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeForMain($query)
+    {
+        return $query->where('in_main', '1')->limit(3);
     }
 }

@@ -26,6 +26,7 @@
                 </div>
 
                 @input(['name' => 'name', 'label' => 'Название'])
+                @input(['name' => 'sub_title', 'label' => 'Подзаголовок для карусели'])
                 @input(['name' => 'title', 'label' => 'Title'])
                 @input(['name' => 'description', 'label' => 'Description'])
                 @input(['name' => 'keywords', 'label' => 'Keywords'])

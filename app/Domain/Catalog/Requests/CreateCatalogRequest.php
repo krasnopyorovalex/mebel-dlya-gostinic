@@ -13,12 +13,13 @@ class CreateCatalogRequest extends Request
     public function rules(): array
     {
         return [
-            'name' => 'bail|required|max:512',
-            'title' => 'required|max:512',
+            'name' => 'bail|required|string|max:512',
+            'title' => 'required|string|max:512',
+            'sub_title' => 'string|max:255|nullable',
             'description' => 'max:512|nullable',
-            'keywords' => 'max:512|nullable',
+            'keywords' => 'max:512|string|nullable',
             'text' => 'required|string',
-            'alias' => 'required|max:255|unique:catalogs',
+            'alias' => 'required|string|max:255|unique:catalogs',
             'is_published' => 'digits_between:0,1',
             'image' => 'image',
             'parent_id' => 'numeric|exists:catalogs,id|nullable',

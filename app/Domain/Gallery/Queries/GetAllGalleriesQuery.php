@@ -15,6 +15,6 @@ class GetAllGalleriesQuery
      */
     public function handle()
     {
-        return Gallery::all();
+        return Gallery::with(['image'])->get();
     }
 }

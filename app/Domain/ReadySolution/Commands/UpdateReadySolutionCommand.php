@@ -46,6 +46,8 @@ class UpdateReadySolutionCommand
             $this->dispatch(new UploadImageCommand($this->request, $readySolution->id, ReadySolution::class));
         }
 
+        $readySolution->relativeProducts()->sync($this->request->post('products'));
+
         return $readySolution->update($this->request->all());
     }
 

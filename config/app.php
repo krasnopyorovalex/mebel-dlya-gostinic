@@ -166,6 +166,11 @@ return [
         App\Providers\TreeRecursiveBuildServiceProvider::class,
         App\Providers\TextBlockServiceProvider::class,
         App\Providers\MenuServiceProvider::class,
+        App\Providers\ReadySolutionsServiceProvider::class,
+        App\Providers\CountNumbersServiceProvider::class,
+        App\Providers\BannersServiceProvider::class,
+        App\Providers\CatalogServiceProvider::class,
+        App\Providers\GalleriesServiceProvider::class,
     ],
 
     /*

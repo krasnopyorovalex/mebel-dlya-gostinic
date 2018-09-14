@@ -37,4 +37,12 @@ class Gallery extends Model
     {
         return $this->hasMany('App\GalleryImage')->orderBy('pos');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     */
+    public function image()
+    {
+        return $this->morphOne('App\Image', 'imageable');
+    }
 }

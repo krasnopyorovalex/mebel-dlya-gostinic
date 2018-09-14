@@ -11,10 +11,30 @@ use App\ReadySolution;
 class GetAllReadySolutionsQuery
 {
     /**
+     * @var bool
+     */
+    private $forMain;
+
+    /**
+     * GetAllReadySolutionsQuery constructor.
+     * @param bool $forMain
+     */
+    public function __construct(bool $forMain = false)
+    {
+        $this->forMain = $forMain;
+    }
+
+    /**
      * Execute the job.
      */
     public function handle()
     {
-        return ReadySolution::all();
+        $query = ReadySolution::with(['image']);
+
+        if ($this->forMain) {
+            $query->forMain();
+        }
+
+        return $query->get();
     }
 }

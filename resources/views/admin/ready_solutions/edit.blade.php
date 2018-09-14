@@ -34,6 +34,16 @@
                             @input(['name' => 'keywords', 'label' => 'Keywords', 'entity' => $readySolution])
 
                             @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $readySolution])
+
+                            <div class="form-group">
+                                <label for="products">Выберите сопутствующие товары</label>
+                                <select class="form-control border-blue border-xs select-search" multiple="multiple" id="products" name="products[]" data-width="100%">
+                                    @foreach($catalogProducts as $catalogProductOption)
+                                        <option value="{{ $catalogProductOption->id }}" {{ in_array($catalogProductOption->id, $rsProductRelatives) ? 'selected' : '' }}>{{ $catalogProductOption->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $readySolution])
                             @checkbox(['name' => 'in_main', 'label' => 'Отображать на главной?', 'entity' => $readySolution])
                             @checkbox(['name' => 'is_published', 'label' => 'Опубликовано?', 'entity' => $readySolution])
