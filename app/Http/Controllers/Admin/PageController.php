@@ -9,6 +9,7 @@ use App\Domain\Page\Queries\GetAllPagesQuery;
 use App\Domain\Page\Queries\GetPageByIdQuery;
 use App\Domain\Slider\Queries\GetAllSlidersQuery;
 use App\Http\Controllers\Controller;
+use App\Page;
 use Domain\Page\Requests\CreatePageRequest;
 use Domain\Page\Requests\UpdatePageRequest;
 
@@ -40,9 +41,11 @@ class PageController extends Controller
     public function create()
     {
         $sliders = $this->dispatch(new GetAllSlidersQuery());
+        $page = new Page();
 
         return view('admin.pages.create', [
-            'sliders' => $sliders
+            'sliders' => $sliders,
+            'templates' => $page->getTemplates()
         ]);
     }
 

@@ -10,6 +10,13 @@
                     <option value="{{ $linkGenerator->createLink($value['module'], $item->alias) }}"  @if ( isset($entity) && $linkGenerator->createLink($value['module'], $item['alias']) == old($name, $entity->{$name}))selected="selected"@endif>
                         {{ $item->name }}
                     </option>
+                    @if ($item->catalogs)
+                        @foreach($item->catalogs as $subCatalog)
+                            <option value="{{ $linkGenerator->createLink($value['module'], $subCatalog->alias, $item->alias) }}"  @if ( isset($entity) && $linkGenerator->createLink($value['module'], $subCatalog->alias, $item->alias) == old($name, $entity->{$name}))selected="selected"@endif>
+                                ***{{ $subCatalog->name }}
+                            </option>
+                        @endforeach
+                    @endif
                 @endforeach
             </optgroup>
             @endif

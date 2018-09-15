@@ -83,11 +83,11 @@
                             <li><a href="{{ route('admin.pages.index') }}"><i class="icon-compose"></i> <span>Страницы</span></a></li>
                             <li><a href="{{ route('admin.about_counts.index') }}"><i class="icon-bubble-lines4"></i> <span>О нас(счётчики)</span></a></li>
                             <li><a href="{{ route('admin.ready_solutions.index') }}"><i class="icon-checkmark4"></i> <span>Готовые решения</span></a></li>
+                            <li><a href="{{ route('admin.why_wes.index') }}"><i class="icon-question7"></i> <span>Почему мы?</span></a></li>
                             <li><a href="{{ route('admin.partners.index') }}"><i class="icon-collaboration"></i> <span>С кем мы работаем</span></a></li>
                             <li><a href="{{ route('admin.banners.index') }}"><i class="icon-images3"></i> <span>Баннеры</span></a></li>
                             <li><a href="{{ route('admin.services.index') }}"><i class="icon-list"></i> <span>Услуги</span></a></li>
                             <li><a href="{{ route('admin.articles.index') }}"><i class="icon-magazine"></i> <span>Статьи</span></a></li>
-                            <li><a href="{{ route('admin.informations.index') }}"><i class="icon-newspaper2"></i> <span>Новости</span></a></li>
                             <li><a href="{{ route('admin.guestbooks.index') }}"><i class="icon-bubble2"></i> <span>Отзывы</span></a></li>
                             <li><a href="{{ route('admin.catalogs.index') }}"><i class="icon-folder-open"></i> <span>Категории каталога</span></a></li>
                             <li><a href="{{ route('admin.menus.index') }}"><i class="icon-lan2"></i> <span>Навигация</span></a></li>

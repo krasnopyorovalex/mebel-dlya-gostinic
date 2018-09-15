@@ -16,6 +16,7 @@ class UpdateAboutCountRequest extends Request
         return [
             'name' => 'bail|required|max:255',
             'count' => 'required|integer',
+            'postfix' => 'string|max:32|nullable',
             'icon' => 'required|string|max:32',
             'pos' => 'integer|min:0|max:255'
         ];

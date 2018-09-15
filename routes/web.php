@@ -12,16 +12,17 @@
 */
 
 Route::pattern('alias', '[a-z-]+');
+Route::pattern('catalog', '[a-z-]+');
 
 Auth::routes();
 
-Route::group(['middleware' => ['redirector']], function () {
+Route::group(['middleware' => ['redirector', 'shortcode']], function () {
     Route::get('/{alias?}', 'PageController@show')->name('page.show');
     Route::get('articles/{alias}', 'ArticleController@show')->name('article.show');
     Route::get('services/{alias}', 'ServiceController@show')->name('service.show');
-    Route::get('informations/{alias}', 'InformationController@show')->name('information.show');
     Route::get('services/{alias}', 'ServiceController@show')->name('service.show');
     Route::get('catalogs/{alias}', 'CatalogController@show')->name('catalog.show');
+    Route::get('catalogs/{catalog}/{alias}', 'CatalogController@sub')->name('catalog.sub');
     Route::get('product/{alias}', 'CatalogProductController@show')->name('catalog_product.show');
     Route::get('ready-solutions/{alias}', 'ReadySolutionController@show')->name('ready_solution.show');
 });

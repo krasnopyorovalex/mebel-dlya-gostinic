@@ -169,8 +169,10 @@ return [
         App\Providers\ReadySolutionsServiceProvider::class,
         App\Providers\CountNumbersServiceProvider::class,
         App\Providers\BannersServiceProvider::class,
-        App\Providers\CatalogServiceProvider::class,
+        App\Providers\CatalogsServiceProvider::class,
         App\Providers\GalleriesServiceProvider::class,
+        App\Providers\WhyWesServiceProvider::class,
+        App\Providers\ArticlesServiceProvider::class,
     ],
 
     /*

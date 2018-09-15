@@ -13,11 +13,12 @@ class CatalogController extends Controller
 
     /**
      * @param string $alias
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(string $alias)
     {
         $catalog = $this->dispatch(new GetCatalogByAliasQuery($alias));
 
-        dd($catalog);
+        return view('catalog.index', ['catalog' => $catalog]);
     }
 }

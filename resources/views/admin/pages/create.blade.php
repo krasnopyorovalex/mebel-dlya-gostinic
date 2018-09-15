@@ -18,6 +18,16 @@
                 @csrf
 
                 @select(['name' => 'slider_id', 'label' => 'Слайдер', 'items' => $sliders])
+
+                <div class="form-group">
+                    <label for="slider_id">Шаблон страницы:</label>
+                    <select class="form-control border-blue border-xs select-search" id="slider_id" name="template" data-width="100%">
+                        @foreach ($templates as $key => $value)
+                            <option value="{{ $key }}">{{ $value }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
                 @input(['name' => 'name', 'label' => 'Название'])
                 @input(['name' => 'title', 'label' => 'Title'])
                 @input(['name' => 'description', 'label' => 'Description'])

@@ -5,10 +5,10 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class CatalogServiceProvider
+ * Class ArticlesServiceProvider
  * @package App\Providers
  */
-class CatalogServiceProvider extends ServiceProvider
+class ArticlesServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -17,6 +17,6 @@ class CatalogServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('view')->composer('page.index', 'App\Http\ViewComposers\CatalogsComposer');
+        $this->app->make('view')->composer('page.index', 'App\Http\ViewComposers\ArticlesComposer');
     }
 }

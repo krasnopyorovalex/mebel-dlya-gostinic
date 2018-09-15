@@ -2217,5 +2217,12 @@ $document.ready(function () {
       makeWaypointScroll($this);
     }
   }
-});
 
+    var categoryList = $('.category__list');
+    categoryList.on('click', '> li > a', function (e) {
+        e.preventDefault();
+        var li = $(this).closest('li');
+        return li.find('ul').toggle('slow');
+    });
+
+});

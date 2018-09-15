@@ -27,6 +27,16 @@
                         <div class="tab-pane active" id="main">
 
                             @select(['name' => 'slider_id', 'label' => 'Слайдер', 'items' => $sliders, 'entity' => $page])
+
+                            <div class="form-group">
+                                <label for="slider_id">Шаблон страницы:</label>
+                                <select class="form-control border-blue border-xs select-search" id="slider_id" name="template" data-width="100%">
+                                    @foreach ($page->getTemplates() as $key => $value)
+                                        <option value="{{ $key }}" {{ $key == $page->template ? 'selected' : '' }}>{{ $value }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             @input(['name' => 'name', 'label' => 'Название', 'entity' => $page])
                             @input(['name' => 'title', 'label' => 'Title', 'entity' => $page])
                             @input(['name' => 'description', 'label' => 'Description', 'entity' => $page])

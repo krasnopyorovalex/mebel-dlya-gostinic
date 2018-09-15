@@ -19,6 +19,7 @@
                 @method('put')
 
                 @input(['name' => 'count', 'label' => 'Количество', 'entity' => $aboutCount])
+                @input(['name' => 'postfix', 'label' => 'Постфикс для цифры', 'entity' => $aboutCount])
                 @input(['name' => 'name', 'label' => 'Название', 'entity' => $aboutCount])
                 @input(['name' => 'icon', 'label' => 'сss-класс иконки', 'entity' => $aboutCount])
 

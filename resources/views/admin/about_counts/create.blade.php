@@ -18,6 +18,7 @@
                 @csrf
 
                 @input(['name' => 'count', 'label' => 'Количество'])
+                @input(['name' => 'postfix', 'label' => 'Постфикс для цифры'])
                 @input(['name' => 'name', 'label' => 'Название'])
                 @input(['name' => 'icon', 'label' => 'сss-класс иконки'])
 

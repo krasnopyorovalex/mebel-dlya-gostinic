@@ -15,6 +15,7 @@ class UpdatePageRequest extends Request
     {
         return [
             'name' => 'bail|required|max:512',
+            'template' => 'required|string|max:24',
             'title' => 'required|max:512',
             'description' => 'max:512|nullable',
             'keywords' => 'max:512|nullable',

@@ -37,10 +37,18 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Page extends Model
 {
+
+    private $templates = [
+        'page.index' => 'Главная',
+        'page.page' => 'Информационная',
+        'page.contacts' => 'Контакты',
+        'page.catalog' => 'Каталог',
+    ];
+
     /**
      * @var array
      */
-    protected $fillable = ['slider_id', 'name', 'title', 'description', 'keywords', 'text', 'alias', 'is_published'];
+    protected $fillable = ['slider_id', 'template', 'name', 'title', 'description', 'keywords', 'text', 'alias', 'is_published'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
@@ -56,5 +64,13 @@ class Page extends Model
     public function slider()
     {
         return $this->belongsTo('App\Slider');
+    }
+
+    /**
+     * @return array
+     */
+    public function getTemplates(): array
+    {
+        return $this->templates;
     }
 }

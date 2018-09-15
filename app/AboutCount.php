@@ -26,5 +26,5 @@ class AboutCount extends Model
     /**
      * @var array
      */
-    protected $fillable = ['count', 'icon', 'name', 'pos'];
+    protected $fillable = ['count', 'postfix', 'icon', 'name', 'pos'];
 }
