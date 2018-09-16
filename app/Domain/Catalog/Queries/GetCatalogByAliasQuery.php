@@ -33,7 +33,7 @@ class GetCatalogByAliasQuery
             return $query->with(['image']);
         }, 'catalogs' => function ($query) {
             return $query->with(['image']);
-        }, 'products'])
+        }])
             ->where('alias', $this->alias)
             ->firstOrFail();
     }

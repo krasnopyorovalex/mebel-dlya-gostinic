@@ -27,10 +27,21 @@
                                 @csrf
                                 @method('put')
 
+                                <div class="form-group">
+                                    <label for="label">Метка:</label>
+                                    <select class="form-control border-blue border-xs select-search" id="slider_id" name="label" data-width="100%">
+                                        @foreach ($catalogProduct->getLabels() as $key => $value)
+                                            <option value="{{ $key }}" {{ $key == $catalogProduct->labael ? 'selected' : '' }}>{{ $value }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
                                 @input(['name' => 'name', 'label' => 'Название', 'entity' => $catalogProduct])
                                 @input(['name' => 'title', 'label' => 'Title', 'entity' => $catalogProduct])
                                 @input(['name' => 'description', 'label' => 'Description', 'entity' => $catalogProduct])
                                 @input(['name' => 'keywords', 'label' => 'Keywords', 'entity' => $catalogProduct])
+
+                                @input(['name' => 'price', 'label' => 'Цена', 'entity' => $catalogProduct])
 
                                 @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $catalogProduct])
 

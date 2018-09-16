@@ -64,7 +64,9 @@ class Catalog extends Model
      */
     public function products()
     {
-        return $this->hasMany('App\CatalogProduct')->orderBy('pos');
+        return $this->hasMany('App\CatalogProduct')->with(['images' => function ($query) {
+            return $query->where('is_published', '1');
+        }])->orderBy('pos');
     }
 
     /**

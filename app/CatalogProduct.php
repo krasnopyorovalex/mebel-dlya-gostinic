@@ -38,10 +38,21 @@ use Illuminate\Database\Eloquent\Model;
  */
 class CatalogProduct extends Model
 {
+
+    public const PER_PAGE = 16;
     /**
      * @var array
      */
-    protected $fillable = ['catalog_id', 'name', 'title', 'description', 'keywords', 'text', 'alias', 'is_published', 'pos'];
+    private $labels = [
+        '' => 'Не выбрано',
+        'sale' => 'Акция',
+        'new' => 'Новинка'
+    ];
+
+    /**
+     * @var array
+     */
+    protected $fillable = ['catalog_id', 'price', 'name', 'title', 'description', 'keywords', 'text', 'alias', 'label', 'is_published', 'pos'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
@@ -65,5 +76,22 @@ class CatalogProduct extends Model
     public function images()
     {
         return $this->hasMany('App\CatalogProductImage', 'product_id')->orderBy('pos');
+    }
+
+    /**
+     * @return array
+     */
+    public function getLabels(): array
+    {
+        return $this->labels;
+    }
+
+    /**
+     * @param string $key
+     * @return mixed
+     */
+    public function getLabelName(string $key)
+    {
+        return $this->labels[$key];
     }
 }

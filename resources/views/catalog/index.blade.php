@@ -26,25 +26,37 @@
                     <div class="section-sm">
                         <div class="row justify-content-sm-center row-70">
 
-                            @if (count($catalog->products))
-                                @foreach ($catalog->products as $product)
+                            @if (count($products))
+                                @foreach ($products as $product)
                                     <div class="col-md-6 col-xl-4">
                                         <div class="product product-grid">
-                                            @if ($product->image)
+                                            @if ($product->images->first())
                                                 <div class="product-img-wrap">
                                                     <a href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">
-                                                        <img src="{{ $product->image->path }}" alt="{{ $product->image->alt }}" title="{{ $product->image->title }}" width="300" height="300"/>
+                                                        <img src="{{ asset('storage/product/' . $product->id . '/' . $product->images->first()->basename . '.' . $product->images->first()->ext) }}" alt="{{ $product->images->first()->alt }}" title="{{ $product->images->first()->title }}" width="300" height="300"/>
                                                     </a>
                                                 </div>
+                                            @endif
+                                            @if ($product->label)
+                                                <div class="product-label-wrap"><span class="{{ $product->label }}">{{ $product->getLabelName($product->label) }}</span></div>
                                             @endif
                                             <div class="product-caption">
                                                 <div class="product-title heading-6">
                                                     <a href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">{{ $product->name }}</a>
                                                 </div>
+                                                @if ($product->price)
+                                                <p class="product-price"><span>{{ number_format($product->price, 0, '', ' ') }}</span></p>
+                                                @endif
+                                                <a class="button-black button button-icon button-icon-left" href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">
+                                                    <span class="icon icon-md linear-icon-chevron-right"></span><span>Подробнее</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 @endforeach
+                                <div class="col-md-12">
+                                    {{ $products->links() }}
+                                </div>
                             @elseif (count($catalog->catalogs))
                                 @foreach ($catalog->catalogs as $catalogItem)
                                 <div class="col-md-6 col-xl-4">

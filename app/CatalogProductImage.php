@@ -38,11 +38,11 @@ class CatalogProductImage extends Model
     protected $fillable = ['product_id', 'name', 'alt', 'title', 'basename', 'ext', 'is_published', 'pos'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function product()
     {
-        return $this->hasOne('App\CatalogProduct');
+        return $this->belongsTo('App\CatalogProduct');
     }
 
     /**

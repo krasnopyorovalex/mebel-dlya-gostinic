@@ -28,10 +28,21 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="main">
 
+                            <div class="form-group">
+                                <label for="label">Метка:</label>
+                                <select class="form-control border-blue border-xs select-search" id="slider_id" name="label" data-width="100%">
+                                    @foreach ($labels as $key => $value)
+                                        <option value="{{ $key }}">{{ $value }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             @input(['name' => 'name', 'label' => 'Название'])
                             @input(['name' => 'title', 'label' => 'Title'])
                             @input(['name' => 'description', 'label' => 'Description'])
                             @input(['name' => 'keywords', 'label' => 'Keywords'])
+
+                            @input(['name' => 'price', 'label' => 'Цена', 'defaultValue' => 0])
 
                             @input(['name' => 'alias', 'label' => 'Alias'])
                             @textarea(['name' => 'text', 'label' => 'Текст'])

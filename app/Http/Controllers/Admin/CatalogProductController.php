@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\CatalogProduct;
 use App\Domain\CatalogProduct\Commands\CreateCatalogProductCommand;
 use App\Domain\CatalogProduct\Commands\DeleteCatalogProductCommand;
 use App\Domain\CatalogProduct\Commands\UpdateCatalogProductCommand;
@@ -39,10 +40,12 @@ class CatalogProductController extends Controller
     public function create($catalog)
     {
         $catalogProducts = $this->dispatch(new GetAllCatalogProductsQuery($catalog));
+        $catalogProduct = new CatalogProduct();
 
         return view('admin.catalog_products.create', [
             'catalog' => $catalog,
-            'catalogProducts' => $catalogProducts
+            'catalogProducts' => $catalogProducts,
+            'labels' => $catalogProduct->getLabels()
         ]);
     }
 
