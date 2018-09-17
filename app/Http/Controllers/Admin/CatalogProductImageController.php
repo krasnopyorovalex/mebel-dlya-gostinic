@@ -57,7 +57,7 @@ class CatalogProductImageController extends Controller
      */
     public function store(CreateCatalogProductImageRequest $request, $product)
     {
-        $image = $this->uploadGalleryImagesService->upload($request, 'product', $product);
+        $image = $this->uploadGalleryImagesService->setWidthThumb(89)->upload($request, 'product', $product);
         $this->dispatch(new CreateCatalogProductImageCommand($image));
 
         return [
