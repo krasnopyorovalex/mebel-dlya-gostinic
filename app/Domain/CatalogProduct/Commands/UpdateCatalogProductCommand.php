@@ -2,6 +2,7 @@
 
 namespace App\Domain\CatalogProduct\Commands;
 
+use App\CatalogProductTab;
 use App\Domain\CatalogProduct\Queries\GetCatalogProductByIdQuery;
 use App\Events\RedirectDetected;
 use App\Http\Requests\Request;
@@ -44,7 +45,25 @@ class UpdateCatalogProductCommand
 
         $catalogProduct->relativeProducts()->sync($this->request->post('products'));
 
+        $this->syncTabs();
+
         return $catalogProduct->update($this->request->all());
+    }
+
+    private function syncTabs(): void
+    {
+        if ($this->request->post('tabs')) {
+            CatalogProductTab::where('product_id', $this->id)->delete();
+            foreach ($this->request->post('tabs') as $key => $value) {
+               if ($value) {
+                   CatalogProductTab::create([
+                       'product_id' => $this->id,
+                       'tab_id' => intval($key),
+                       'value' => (string)$value
+                   ]);
+               }
+            }
+        }
     }
 
 }

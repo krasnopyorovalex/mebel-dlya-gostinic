@@ -34,9 +34,9 @@ class UpdateTabCommand
      */
     public function handle(): bool
     {
-        $Tab = $this->dispatch(new GetTabByIdQuery($this->id));
+        $tab = $this->dispatch(new GetTabByIdQuery($this->id));
 
-        return $Tab->update($this->request->all());
+        return $tab->update($this->request->all());
     }
 
 }

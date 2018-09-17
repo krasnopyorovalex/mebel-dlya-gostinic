@@ -30,11 +30,10 @@ class CreateTabCommand
      */
     public function handle(): bool
     {
-        $page = new Tab();
-        $page->fill($this->request->all());
-        $page->save();
+        $tab = new Tab();
+        $tab->fill($this->request->all());
 
-        return true;
+        return $tab->save();
     }
 
 }

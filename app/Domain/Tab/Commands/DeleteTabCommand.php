@@ -35,9 +35,9 @@ class DeleteTabCommand
      */
     public function handle(): bool
     {
-        $Tab = $this->dispatch(new GetTabByIdQuery($this->id));
+        $tab = $this->dispatch(new GetTabByIdQuery($this->id));
 
-        return $Tab->delete();
+        return $tab->delete();
     }
 
 }

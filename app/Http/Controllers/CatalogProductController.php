@@ -19,6 +19,10 @@ class CatalogProductController extends Controller
     {
         $product = $this->dispatch(new GetCatalogProductByAliasQuery($alias));
 
+        $product->tabs = $product->tabs->mapWithKeys(function ($item) {
+            return [$item->tab_id => $item->value];
+        });
+
         return view('product.index', [
             'product' => $product
         ]);

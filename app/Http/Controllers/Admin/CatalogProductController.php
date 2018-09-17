@@ -8,6 +8,7 @@ use App\Domain\CatalogProduct\Commands\DeleteCatalogProductCommand;
 use App\Domain\CatalogProduct\Commands\UpdateCatalogProductCommand;
 use App\Domain\CatalogProduct\Queries\GetAllCatalogProductsQuery;
 use App\Domain\CatalogProduct\Queries\GetCatalogProductByIdQuery;
+use App\Domain\Tab\Queries\GetAllTabsQuery;
 use App\Http\Controllers\Controller;
 use Domain\CatalogProduct\Requests\CreateCatalogProductRequest;
 use Domain\CatalogProduct\Requests\UpdateCatalogProductRequest;
@@ -41,11 +42,13 @@ class CatalogProductController extends Controller
     {
         $catalogProducts = $this->dispatch(new GetAllCatalogProductsQuery($catalog));
         $catalogProduct = new CatalogProduct();
+        $tabs = $this->dispatch(new GetAllTabsQuery());
 
         return view('admin.catalog_products.create', [
             'catalog' => $catalog,
             'catalogProducts' => $catalogProducts,
-            'labels' => $catalogProduct->getLabels()
+            'labels' => $catalogProduct->getLabels(),
+            'tabs' => $tabs
         ]);
     }
 
@@ -76,11 +79,17 @@ class CatalogProductController extends Controller
         $catalogProducts = $this->dispatch(new GetAllCatalogProductsQuery($catalogProduct->catalog_id, $catalogProduct->id));
 
         $catalogProductRelatives = get_ids_from_array($catalogProduct->relativeProducts->toArray());
+        $tabs = $this->dispatch(new GetAllTabsQuery());
+
+        $catalogProduct->tabs = $catalogProduct->tabs->mapWithKeys(function ($item) {
+            return [$item->tab_id => $item->value];
+        });
 
         return view('admin.catalog_products.edit', [
             'catalogProduct' => $catalogProduct,
             'catalogProducts' => $catalogProducts,
-            'catalogProductRelatives' => $catalogProductRelatives
+            'catalogProductRelatives' => $catalogProductRelatives,
+            'tabs' => $tabs
         ]);
     }
 

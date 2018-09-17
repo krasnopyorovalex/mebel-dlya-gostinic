@@ -73,6 +73,22 @@ class CatalogProduct extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
+    public function tabs()
+    {
+        return $this->hasMany(CatalogProductTab::class, 'product_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function originTabs()
+    {
+        return $this->belongsToMany(Tab::class, 'catalog_product_tabs', 'product_id', 'tab_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function images()
     {
         return $this->hasMany('App\CatalogProductImage', 'product_id')->orderBy('pos');

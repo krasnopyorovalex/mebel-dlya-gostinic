@@ -30,11 +30,10 @@ class CreateSeoBlockCommand
      */
     public function handle(): bool
     {
-        $page = new SeoBlock();
-        $page->fill($this->request->all());
-        $page->save();
+        $seoBlock = new SeoBlock();
+        $seoBlock->fill($this->request->all());
 
-        return true;
+        return $seoBlock->save();
     }
 
 }

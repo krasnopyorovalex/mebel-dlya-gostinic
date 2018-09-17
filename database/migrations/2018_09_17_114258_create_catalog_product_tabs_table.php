@@ -16,6 +16,7 @@ class CreateCatalogProductTabsTable extends Migration
         Schema::create('catalog_product_tabs', function (Blueprint $table) {
             $table->unsignedInteger('product_id');
             $table->unsignedInteger('tab_id');
+            $table->text('value');
 
             $table->primary(['product_id', 'tab_id']);
 

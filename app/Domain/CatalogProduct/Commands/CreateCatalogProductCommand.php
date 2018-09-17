@@ -2,6 +2,7 @@
 
 namespace App\Domain\CatalogProduct\Commands;
 
+use App\CatalogProductTab;
 use App\Http\Requests\Request;
 use App\CatalogProduct;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -36,7 +37,26 @@ class CreateCatalogProductCommand
 
         $catalogProduct->relativeProducts()->attach($this->request->post('products'));
 
+        $this->attachTabs($catalogProduct);
+
         return $result;
     }
 
+    /**
+     * @param $catalogProduct
+     */
+    private function attachTabs($catalogProduct): void
+    {
+        if ($this->request->post('tabs')) {
+            foreach ($this->request->post('tabs') as $key => $value) {
+                if ($value) {
+                    CatalogProductTab::create([
+                        'product_id' => $catalogProduct->id,
+                        'tab_id' => intval($key),
+                        'value' => (string)$value
+                    ]);
+                }
+            }
+        }
+    }
 }

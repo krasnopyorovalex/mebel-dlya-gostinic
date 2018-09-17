@@ -66,40 +66,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12">
-                    <!-- Bootstrap tabs-->
-                    <div class="tabs-custom tabs-horizontal" id="tabs-1">
-                        <!-- Nav tabs-->
-                        <ul class="nav-custom nav-custom-tabs nav-custom__align-left nav nav-tabs">
-                            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-1-1" data-toggle="tab">DESCRIPTION</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-2" data-toggle="tab">ADDITIONAL INFORMATION</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-3" data-toggle="tab">REVIEWS (1)</a></li>
-                        </ul>
-                    </div>
-                    <div class="tab-content text-left">
-                        <div class="tab-pane fade show active" id="tabs-1-1">
-                            <div class="row row-60">
-                                <div class="col-md-12">
-                                    ///tab-01
-                                </div>
-                            </div>
+                @if (count($product->originTabs))
+                    <div class="col-sm-12">
+                        <!-- Bootstrap tabs-->
+                        <div class="tabs-custom tabs-horizontal" id="tabs-1">
+                            <!-- Nav tabs-->
+                            <ul class="nav-custom nav-custom-tabs nav-custom__align-left nav nav-tabs">
+                                @foreach ($product->originTabs as $tab)
+                                    <li class="nav-item" role="presentation"><a class="nav-link{{ $loop->index == 0 ? ' active' : ''}}" href="#tabs-1-{{ $tab->id }}" data-toggle="tab">{{ $tab->name }}</a></li>
+                                @endforeach
+                            </ul>
                         </div>
-                        <div class="tab-pane fade" id="tabs-1-2">
-                            <div class="row row-60">
-                                <div class="col-md-12">
-                                    ///tab-02
+                        <div class="tab-content text-left">
+
+                            @foreach ($product->originTabs as $tab)
+                                <div class="tab-pane fade show{{ $loop->index == 0 ? ' active' : ''}}" id="tabs-1-{{ $tab->id }}">
+                                    <div class="row row-60">
+                                        <div class="col-md-12">
+                                            {!! $product->tabs[$tab->id] !!}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tabs-1-3">
-                            <div class="row row-60">
-                                <div class="col-md-12">
-                                    ///tab-03
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>
@@ -126,7 +117,7 @@
                                     <div class="product-label-wrap"><span></span></div>
                                 </div>
                                 <div class="product-caption">
-                                    <div class="heading-6" class="product-title">
+                                    <div class="heading-6 product-title">
                                         <a href="{{ route('catalog_product.show', ['alias' => $relativeProduct->alias]) }}">
                                             {{ $relativeProduct->name }}
                                         </a>

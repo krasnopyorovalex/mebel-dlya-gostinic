@@ -44,7 +44,6 @@
                                 @input(['name' => 'price', 'label' => 'Цена', 'entity' => $catalogProduct])
 
                                 @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $catalogProduct])
-
                                 <div class="form-group">
                                     <label for="products">Выберите сопутствующие товары</label>
                                     <select class="form-control border-blue border-xs select-search" multiple="multiple" id="products" name="products[]" data-width="100%">
@@ -54,8 +53,18 @@
                                     </select>
                                 </div>
 
-                                @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $catalogProduct])
+                                @textarea(['name' => 'text', 'label' => 'Текст рядом со слайдером', 'entity' => $catalogProduct])
                                 @checkbox(['name' => 'is_published', 'label' => 'Опубликовано?', 'entity' => $catalogProduct])
+
+                                <hr>
+                                <h3>Табы</h3>
+
+                                @foreach ($tabs as $tab)
+                                    <div class="form-group">
+                                        <label for="editor-full-tab-{{ $tab->id }}">{{ $tab->name }}:</label>
+                                        <textarea class="form-control border-blue border-xs tabs__editor" rows="" id="editor-full-tab-{{ $tab->id }}" name="tabs[{{ $tab->id }}]">{{ $catalogProduct->tabs[$tab->id] ?? '' }}</textarea>
+                                    </div>
+                                @endforeach
 
                                 @submit_btn()
                             </form>

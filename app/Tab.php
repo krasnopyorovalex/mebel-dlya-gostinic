@@ -12,5 +12,4 @@ class Tab extends Model
      * @var array
      */
     protected $fillable = ['name'];
-
 }
