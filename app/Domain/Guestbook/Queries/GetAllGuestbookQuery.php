@@ -10,11 +10,28 @@ use App\Guestbook;
  */
 class GetAllGuestbookQuery
 {
+    private $limit;
+
+    /**
+     * GetAllGuestbookQuery constructor.
+     * @param bool $limit
+     */
+    public function __construct($limit = false)
+    {
+        $this->limit = $limit;
+    }
+
     /**
      * Execute the job.
      */
     public function handle()
     {
-        return Guestbook::all();
+        $query = Guestbook::with(['image'])->orderByDesc('published_at');
+
+        if ($this->limit) {
+            $query->limit($this->limit);
+        }
+
+        return $query->get();
     }
 }

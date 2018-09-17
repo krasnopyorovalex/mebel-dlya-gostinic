@@ -173,6 +173,8 @@ return [
         App\Providers\GalleriesServiceProvider::class,
         App\Providers\WhyWesServiceProvider::class,
         App\Providers\ArticlesServiceProvider::class,
+        App\Providers\GuestbookServiceProvider::class,
+        App\Providers\PartnersServiceProvider::class,
     ],
 
     /*

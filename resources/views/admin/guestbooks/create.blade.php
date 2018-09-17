@@ -18,7 +18,6 @@
                 @csrf
 
                 @input(['name' => 'name', 'label' => 'Название'])
-                @input(['name' => 'city', 'label' => 'Город'])
 
                 @imageInput(['name' => 'image', 'type' => 'file', 'label' => 'Выберите изображение на компьютере'])
 
