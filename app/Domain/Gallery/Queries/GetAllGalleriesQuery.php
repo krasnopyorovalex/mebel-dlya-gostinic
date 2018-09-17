@@ -10,11 +10,24 @@ use App\Gallery;
  */
 class GetAllGalleriesQuery
 {
+    private $isPublished;
+
+    public function __construct($isPublished = false)
+    {
+        $this->isPublished = $isPublished;
+    }
+
     /**
      * Execute the job.
      */
     public function handle()
     {
-        return Gallery::with(['image'])->get();
+        $query = Gallery::with(['image']);
+
+        if ($this->isPublished) {
+            $query->where('is_published', '1');
+        }
+
+        return $query->get();
     }
 }

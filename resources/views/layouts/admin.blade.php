@@ -92,7 +92,7 @@
                             <li><a href="{{ route('admin.tabs.index') }}"><i class="icon-new-tab2"></i> <span>Табы для товаров</span></a></li>
                             <li><a href="{{ route('admin.catalogs.index') }}"><i class="icon-folder-open"></i> <span>Категории каталога</span></a></li>
                             <li><a href="{{ route('admin.menus.index') }}"><i class="icon-lan2"></i> <span>Навигация</span></a></li>
-                            <li><a href="{{ route('admin.galleries.index') }}"><i class="icon-images3"></i> <span>Фотогалерея</span></a></li>
+                            <li><a href="{{ route('admin.galleries.index') }}"><i class="icon-images3"></i> <span>Наши работы</span></a></li>
                             <li><a href="{{ route('admin.sliders.index') }}"><i class="icon-images2"></i> <span>Слайдер</span></a></li>
                             <li><a href="{{ route('admin.seo_blocks.index') }}"><i class="icon-markup"></i> <span>SEO-блоки</span></a></li>
                             <li><a href="{{ route('admin.text_blocks.index') }}"><i class="icon-stack2"></i> <span>Текстовые-блоки</span></a></li>

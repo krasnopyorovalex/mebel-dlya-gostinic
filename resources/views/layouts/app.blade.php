@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic%7CCormorant+Garamond:300,400,400i,600,700">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/lightbox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="/images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -109,6 +110,7 @@
 <div class="snackbars" id="form-output-global"></div>
 <!-- Javascript-->
 <script src="{{ asset('js/core.min.js') }}"></script>
+<script src="{{ asset('js/lightbox.min.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

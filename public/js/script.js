@@ -32,8 +32,8 @@ var userAgent = navigator.userAgent.toLowerCase(),
     swiper: $(".swiper-slider"),
     search: $(".rd-search"),
     searchResults: $('.rd-search-results'),
-    mfp: $('[data-lightbox]').not('[data-lightbox="gallery"] [data-lightbox]'),
-    mfpGallery: $('[data-lightbox^="gallery"]'),
+    //mfp: $('[data-lightbox]').not('[data-lightbox="gallery"] [data-lightbox]'),
+    //mfpGallery: $('[data-lightbox^="gallery"]'),
     statefulButton: $('.btn-stateful'),
     isotope: $(".isotope"),
     popover: $('[data-toggle="popover"]'),
@@ -1838,35 +1838,35 @@ $document.ready(function () {
    * @see          http://dimsemenov.com/plugins/magnific-popup/
    * @version      v1.0.0
    */
-  if (plugins.mfp.length > 0 || plugins.mfpGallery.length > 0 && isNoviBuilder != "designMode") {
-    if (plugins.mfp.length) {
-      for (i = 0; i < plugins.mfp.length; i++) {
-        var mfpItem = plugins.mfp[i];
-
-        $(mfpItem).magnificPopup({
-          type: mfpItem.getAttribute("data-lightbox")
-        });
-      }
-    }
-    if (plugins.mfpGallery.length) {
-      for (i = 0; i < plugins.mfpGallery.length; i++) {
-        var mfpGalleryItem = $(plugins.mfpGallery[i]).find('[data-lightbox]');
-
-        for (var c = 0; c < mfpGalleryItem.length; c++) {
-          $(mfpGalleryItem).addClass("mfp-" + $(mfpGalleryItem).attr("data-lightbox"));
-        }
-
-        mfpGalleryItem.end()
-          .magnificPopup({
-            delegate: '[data-lightbox]',
-            type: "image",
-            gallery: {
-              enabled: true
-            }
-          });
-      }
-    }
-  }
+  // if (plugins.mfp.length > 0 || plugins.mfpGallery.length > 0 && isNoviBuilder != "designMode") {
+  //   if (plugins.mfp.length) {
+  //     for (i = 0; i < plugins.mfp.length; i++) {
+  //       var mfpItem = plugins.mfp[i];
+  //
+  //       $(mfpItem).magnificPopup({
+  //         type: mfpItem.getAttribute("data-lightbox")
+  //       });
+  //     }
+  //   }
+  //   if (plugins.mfpGallery.length) {
+  //     for (i = 0; i < plugins.mfpGallery.length; i++) {
+  //       var mfpGalleryItem = $(plugins.mfpGallery[i]).find('[data-lightbox]');
+  //
+  //       for (var c = 0; c < mfpGalleryItem.length; c++) {
+  //         $(mfpGalleryItem).addClass("mfp-" + $(mfpGalleryItem).attr("data-lightbox"));
+  //       }
+  //
+  //       mfpGalleryItem.end()
+  //         .magnificPopup({
+  //           delegate: '[data-lightbox]',
+  //           type: "image",
+  //           gallery: {
+  //             enabled: true
+  //           }
+  //         });
+  //     }
+  //   }
+  // }
 
   /**
    * Slick carousel
@@ -2225,4 +2225,27 @@ $document.ready(function () {
         return li.find('ul').toggle('slow');
     });
 
+    lightbox.option({
+        'albumLabel': 'Изображение %1 из %2'
+    })
+
+    var portfolioItems = $('.portfolio__items');
+    if(portfolioItems.length) {
+        portfolioItems.on('click', '.btn__more', function () {
+            var _this = $(this),
+                portfolioId = _this.attr('data-portfolio-id');
+            var images = $('.portfolio__items-' + portfolioId).find('.must__show');
+
+            images.slice(0,4).each(function () {
+              var _this = $(this);
+                return _this.attr('src', _this.attr('data-src')).fadeIn() && _this.removeClass('must__show');
+            });
+
+            if((images.length - 4) < 1) {
+              return _this.hide();
+            }
+
+            return true;
+        });
+    }
 });

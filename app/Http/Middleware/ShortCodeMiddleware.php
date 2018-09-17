@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Domain\Article\Queries\GetAllArticlesQuery;
+use App\Domain\Gallery\Queries\GetAllGalleriesQuery;
 use Closure;
 use Illuminate\Http\Response;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -33,6 +34,11 @@ class ShortCodeMiddleware
                     $articles = $this->dispatch(new GetAllArticlesQuery(false, true));
 
                     return view('layouts.partials.for_shortcodes.articles_list', ['articles' => $articles]);
+                },
+                '#(<p(.*)>)?{portfolio}(<\/p>)?#' => function () {
+                    $portfolios = $this->dispatch(new GetAllGalleriesQuery(true));
+
+                    return view('layouts.partials.for_shortcodes.portfolio_list', ['portfolios' => $portfolios]);
                 }
             ],
             $response->content()

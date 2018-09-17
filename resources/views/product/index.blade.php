@@ -44,7 +44,7 @@
                     <div class="slick-slider" id="child-carousel" data-for=".carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="3" data-xs-items="4" data-sm-items="4" data-md-items="4" data-lg-items="4" data-xl-items="5" data-slide-to-scroll="1">
                         @foreach ($product->images as $image)
                             <div class="item">
-                                <img src="{{ asset('storage/product/' . $product->id . '/' . $image->basename . '_thumb.' . $image->ext) }}" alt="" width="89" height="89"/>
+                                <img src="{{ asset('storage/product/' . $product->id . '/' . $image->basename . '_thumb.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}" width="89" height="89"/>
                             </div>
                         @endforeach
                     </div>

@@ -95,12 +95,12 @@
                         <!-- Thumb corporate-->
                         <div class="thumb thumb-corporate">
                             <div class="thumb-corporate__main">
-                                <a href="{{ route('page.show', ['alias' => 'gallery']) }}#{{ $gallery->id }}">
+                                <a href="{{ route('page.show', ['alias' => 'portfolio']) }}#portfolio-{{ $gallery->id }}">
                                     <img src="{{ $gallery->image->path }}" alt="{{ $gallery->image->alt }}" title="{{ $gallery->image->title }}" width="301" height="301"/>
                                 </a>
                             </div>
                             <div class="thumb-corporate__caption">
-                                <p class="thumb__title"><a href="{{ route('page.show', ['alias' => 'gallery']) }}#{{ $gallery->id }}">{{ $gallery->name }}</a></p>
+                                <p class="thumb__title"><a href="{{ route('page.show', ['alias' => 'portfolio']) }}#portfolio-{{ $gallery->id }}">{{ $gallery->name }}</a></p>
                             </div>
                         </div>
                     </div>

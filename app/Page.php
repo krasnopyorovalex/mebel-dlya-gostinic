@@ -43,6 +43,7 @@ class Page extends Model
         'page.page' => 'Информационная',
         'page.contacts' => 'Контакты',
         'page.catalog' => 'Каталог',
+        'page.portfolio' => 'Портфолио'
     ];
 
     /**
