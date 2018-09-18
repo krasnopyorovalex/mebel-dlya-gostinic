@@ -28,7 +28,7 @@
                 <div class="col-md-7 col-lg-8">
                     <div class="heading-3">Контактная форма</div>
                     <!-- RD Mailform-->
-                    <form class="rd-mailform rd-mailform_style-1" action="#">
+                    <form class="rd-mailform rd-mailform_style-1" action="{{ route('contact.send') }}" method="post">
                         <div class="form-wrap">
                             <input class="form-input" id="contact-name" type="text" name="name">
                             <label class="form-label" for="contact-name">Ваше имя</label>

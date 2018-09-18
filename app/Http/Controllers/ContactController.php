@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\RecallSended;
+use App\Mail\ContactFormSended;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 /**
- * Class RecallController
+ * Class ContactController
  * @package App\Http\Controllers
  */
-class RecallController extends Controller
+class ContactController extends Controller
 {
     /**
      * @param Request $request
@@ -18,7 +18,7 @@ class RecallController extends Controller
      */
     public function send(Request $request)
     {
-        Mail::to(['djShtaket88@mail.ru'])->send(new RecallSended($request->all()));
+        Mail::to(['djShtaket88@mail.ru'])->send(new ContactFormSended($request->all()));
 
         return back();
     }

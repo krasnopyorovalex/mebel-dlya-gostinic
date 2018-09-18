@@ -2,22 +2,22 @@
 
 namespace App\Mail;
 
-use Illuminate\Http\Request;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-class RecallSended extends Mailable
+class ContactFormSended extends Mailable
 {
     use Queueable, SerializesModels;
 
     private $data;
 
     /**
-     * RecallSended constructor.
-     * @param $data
+     * ContactFormSended constructor.
+     * @param array $data
      */
-    public function __construct($data)
+    public function __construct(array $data)
     {
         $this->data = $data;
     }
@@ -29,9 +29,9 @@ class RecallSended extends Mailable
      */
     public function build()
     {
-        return $this->from(['sanya-sliver@yandex.ru' => 'Melanogaster'])
-            ->subject('Форма: перезвоните мне')
-            ->view('emails.recall', [
+        return $this->from('sanya-sliver@yandex.ru')
+            ->subject('Форма: страница контактов')
+            ->view('emails.contact', [
                 'data' => $this->data
             ]);
     }
