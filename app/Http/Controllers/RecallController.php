@@ -18,12 +18,7 @@ class RecallController extends Controller
      */
     public function send(Request $request)
     {
-        //Mail::to(['djShtaket88@mail.ru'])->send(new RecallSended($request->all()));
-
-        $swiftmailer = Mail::getSwiftMailer();
-        print_r($swiftmailer->getTransport());
-
-        exit;
+        Mail::to(['djShtaket88@mail.ru'])->send(new RecallSended($request->all()));
 
         return back();
     }
