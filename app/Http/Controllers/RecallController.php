@@ -18,7 +18,7 @@ class RecallController extends Controller
      */
     public function send(Request $request)
     {
-        Mail::to(['djShtaket88@mail.ru' => 'kykyshka'])->send(new RecallSended($request->all()));
+        Mail::to(['djShtaket88@mail.ru'])->send(new RecallSended($request->all()));
 
         exit('sdvsd');
     }
