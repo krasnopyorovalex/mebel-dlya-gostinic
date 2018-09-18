@@ -16,6 +16,8 @@ Route::pattern('catalog', '[a-z-]+');
 
 Auth::routes();
 
+Route::post('recall-send', 'RecallController@send')->name('recall.send');
+
 Route::group(['middleware' => ['redirector', 'shortcode']], function () {
     Route::get('/{alias?}', 'PageController@show')->name('page.show');
     Route::get('articles/{alias}', 'ArticleController@show')->name('article.show');

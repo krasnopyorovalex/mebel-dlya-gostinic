@@ -72,6 +72,12 @@ var userAgent = navigator.userAgent.toLowerCase(),
 $document.ready(function () {
   var isNoviBuilder = window.xMode;
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
   /**
    * getSwiperHeight
    * @description  calculate the height of swiper slider basing on data attr

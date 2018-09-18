@@ -67,12 +67,14 @@
     </section>
 
     <section class="recall__me">
-        <form action="#" method="post">
+        <div class="title__form heading-4">Перезвоните мне</div>
+        <form action="{{ route('recall.send') }}" method="post" id="recall-form">
+            @csrf
             <div class="form-group form-wrap_icon linear-icon-man">
-                <input type="text" class="name__filed form-input" value="" placeholder="Ваше имя">
+                <input type="text" class="name__filed form-input" value="" placeholder="Ваше имя" name="name" required>
             </div>
             <div class="form-group form-wrap_icon linear-icon-envelope">
-                <input type="email" class="email__field form-input" value="" placeholder="Ваше e-mail">
+                <input type="email" class="email__field form-input" value="" placeholder="Ваш e-mail" name="email" required>
             </div>
             <div class="form-group">
                 <button class="button button-black" type="submit">Отправить</button>
