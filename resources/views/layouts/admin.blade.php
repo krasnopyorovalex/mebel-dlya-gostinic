@@ -88,7 +88,7 @@
                             <li><a href="{{ route('admin.banners.index') }}"><i class="icon-images3"></i> <span>Баннеры</span></a></li>
                             <li><a href="{{ route('admin.articles.index') }}"><i class="icon-magazine"></i> <span>Статьи</span></a></li>
                             <li><a href="{{ route('admin.guestbooks.index') }}"><i class="icon-bubble2"></i> <span>Отзывы</span></a></li>
-                            <li><a href="{{ route('admin.tabs.index') }}"><i class="icon-new-tab2"></i> <span>Табы для товаров</span></a></li>
+                            <li><a href="{{ route('admin.tabs.index') }}"><i class="icon-new-tab2"></i> <span>Табы</span></a></li>
                             <li><a href="{{ route('admin.catalogs.index') }}"><i class="icon-folder-open"></i> <span>Категории каталога</span></a></li>
                             <li><a href="{{ route('admin.menus.index') }}"><i class="icon-lan2"></i> <span>Навигация</span></a></li>
                             <li><a href="{{ route('admin.galleries.index') }}"><i class="icon-images3"></i> <span>Наши работы</span></a></li>
@@ -168,6 +168,9 @@
                     <li>Статьи - {articles_list}</li>
                     <li>Карта сайта - {sitemap}</li>
                     <li>Готовые решения - {ready_solutions}</li>
+                    <li>Наши работы - {our_works}</li>
+                    <li>Почему мы - {why_wes}</li>
+                    <li>Отзывы на главной - {guestbook}</li>
                 </ul>
             </div>
 

@@ -18,6 +18,7 @@ Auth::routes();
 
 Route::post('recall-send', 'RecallController@send')->name('recall.send');
 Route::post('contact-send', 'ContactController@send')->name('contact.send');
+Route::post('product-send', 'CatalogProductController@send')->name('product.send');
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
 
 Route::group(['middleware' => ['redirector', 'shortcode']], function () {

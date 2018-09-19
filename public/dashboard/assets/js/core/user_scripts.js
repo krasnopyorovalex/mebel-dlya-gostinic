@@ -3,7 +3,8 @@ $(function() {
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
+        },
+        cache: false
     });
 
     /*
@@ -56,6 +57,7 @@ $(function() {
         imagesBox = jQuery('#_images_box');
     imagesBox.on('click', '.icon-pencil', function () {
         $.get(jQuery(this).closest('a').attr('href'), function(data){
+            editImageBox.html('');
             return editImageBox.html(data) && $(".control-primary").uniform({
                 radioClass: 'choice',
                 wrapperClass: 'border-primary-600 text-primary-800'
@@ -71,6 +73,7 @@ $(function() {
             type: "POST",
             dataType: "json",
             data: _this.serialize(),
+            cache: false,
             error: function (error, message) {
                 new PNotify({
                     title: 'Уведомление от сервера',

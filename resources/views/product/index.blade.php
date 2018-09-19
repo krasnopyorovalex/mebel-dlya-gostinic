@@ -146,15 +146,15 @@
                 <div class="modal-dialog__content">
                     <div class="heading-6">Форма запроса стоимости</div>
                     <!-- RD Mailform-->
-                    <form class="rd-mailform rd-mailform_responsive" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-
+                    <form class="rd-mailform rd-mailform_responsive" method="post" action="{{ route('product.send') }}">
+                        @csrf
                         <div class="form-wrap form-wrap_icon linear-icon-bag">
                             <input class="form-input" id="modal-register-product" value="{{ $product->name }}" type="text" name="product" readonly>
                             <label class="form-label" for="modal-register-product">Товар</label>
                         </div>
 
                         <div class="form-wrap form-wrap_icon linear-icon-user">
-                            <input class="form-input" id="modal-register-fio" type="text" name="text" autocomplete="off">
+                            <input class="form-input" id="modal-register-fio" type="text" name="name" autocomplete="off">
                             <label class="form-label" for="modal-register-fio">Ваше имя</label>
                         </div>
 

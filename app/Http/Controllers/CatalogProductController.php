@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Domain\CatalogProduct\Queries\GetCatalogProductByAliasQuery;
+use App\Mail\ProductOrdered;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * Class CatalogProductController
@@ -26,5 +29,18 @@ class CatalogProductController extends Controller
         return view('product.index', [
             'product' => $product
         ]);
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function send(Request $request)
+    {
+        Mail::to(['djShtaket88@mail.ru', 'info@krasber.ru'])->send(new ProductOrdered($request->all()));
+
+        $request->session()->flash('status', 'Благодарим за вашу заявку. Наш менеджер свяжется с вами в ближайшее время');
+
+        return back();
     }
 }

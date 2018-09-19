@@ -106,8 +106,13 @@
         </div>
     </footer>
 </div>
-<!-- Global Mailform Output-->
-<div class="snackbars" id="form-output-global"></div>
+@if (session('status'))
+    <!-- Global Mailform Output-->
+    <div class="snackbars active success" id="form-output-global">
+        <span class="close" title="Закрыть окно">x</span>
+        <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>Благодарим за вашу заявку. Наш менеджер свяжется с вами в ближайшее время</span></p>
+    </div>
+@endif
 <!-- Javascript-->
 <script src="{{ asset('js/core.min.js') }}"></script>
 <script src="{{ asset('js/lightbox.min.js') }}"></script>

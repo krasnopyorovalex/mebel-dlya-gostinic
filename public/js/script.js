@@ -2102,4 +2102,9 @@ $document.ready(function () {
             return true;
         });
     }
+
+    var popupMsg = $('#form-output-global');
+    popupMsg.on('click', '.close', function () {
+        return $(this).closest('#form-output-global').fadeOut();
+    });
 });
