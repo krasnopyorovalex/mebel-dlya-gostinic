@@ -35,6 +35,7 @@ class GetCatalogByAliasQuery
             return $query->with(['image']);
         }])
             ->where('alias', $this->alias)
+            ->where('is_published', '1')
             ->firstOrFail();
     }
 }

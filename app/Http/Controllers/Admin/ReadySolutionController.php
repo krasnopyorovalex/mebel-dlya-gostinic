@@ -8,6 +8,7 @@ use App\Domain\ReadySolution\Commands\DeleteReadySolutionCommand;
 use App\Domain\ReadySolution\Commands\UpdateReadySolutionCommand;
 use App\Domain\ReadySolution\Queries\GetAllReadySolutionsQuery;
 use App\Domain\ReadySolution\Queries\GetReadySolutionByIdQuery;
+use App\Domain\Tab\Queries\GetAllTabsQuery;
 use App\Http\Controllers\Controller;
 use Domain\ReadySolution\Requests\CreateReadySolutionRequest;
 use Domain\ReadySolution\Requests\UpdateReadySolutionRequest;
@@ -39,7 +40,11 @@ class ReadySolutionController extends Controller
      */
     public function create()
     {
-        return view('admin.ready_solutions.create');
+        $tabs = $this->dispatch(new GetAllTabsQuery());
+
+        return view('admin.ready_solutions.create', [
+            'tabs' => $tabs
+        ]);
     }
 
     /**
@@ -65,13 +70,19 @@ class ReadySolutionController extends Controller
     {
         $readySolution = $this->dispatch(new GetReadySolutionByIdQuery($id));
         $catalogProducts = $this->dispatch(new GetAllCatalogProductsQuery());
+        $tabs = $this->dispatch(new GetAllTabsQuery());
 
         $rsProductRelatives = get_ids_from_array($readySolution->relativeProducts->toArray());
+
+        $readySolution->tabs = $readySolution->tabs->mapWithKeys(function ($item) {
+            return [$item->tab_id => $item->value];
+        });
 
         return view('admin.ready_solutions.edit', [
             'readySolution' => $readySolution,
             'catalogProducts' => $catalogProducts,
-            'rsProductRelatives' => $rsProductRelatives
+            'rsProductRelatives' => $rsProductRelatives,
+            'tabs' => $tabs
         ]);
     }
 

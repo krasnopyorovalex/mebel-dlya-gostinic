@@ -29,6 +29,6 @@ class GetReadySolutionByIdQuery
      */
     public function handle()
     {
-        return ReadySolution::findOrFail($this->id);
+        return ReadySolution::with(['images'])->findOrFail($this->id);
     }
 }

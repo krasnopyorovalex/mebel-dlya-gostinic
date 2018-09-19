@@ -29,7 +29,7 @@ class ReadySolution extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'name_image', 'title', 'description', 'keywords', 'text', 'alias', 'is_published'];
+    protected $fillable = ['name', 'name_image', 'price', 'title', 'description', 'keywords', 'text', 'alias', 'is_published'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
@@ -45,6 +45,30 @@ class ReadySolution extends Model
     public function relativeProducts()
     {
         return $this->belongsToMany(CatalogProduct::class, 'rs_product_relatives', 'rs_id', 'product_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function images()
+    {
+        return $this->hasMany('App\RSImage', 'rs_id')->orderBy('pos');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tabs()
+    {
+        return $this->hasMany(ReadySolutionTab::class, 'rs_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function originTabs()
+    {
+        return $this->belongsToMany(Tab::class, 'ready_solution_tabs', 'rs_id', 'tab_id');
     }
 
     /**

@@ -7,6 +7,7 @@ use App\Domain\ReadySolution\Queries\GetReadySolutionByIdQuery;
 use App\Domain\Image\Commands\DeleteImageCommand;
 use App\Domain\Image\Commands\UploadImageCommand;
 use App\Http\Requests\Request;
+use App\ReadySolutionTab;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
@@ -48,7 +49,25 @@ class UpdateReadySolutionCommand
 
         $readySolution->relativeProducts()->sync($this->request->post('products'));
 
+        $this->syncTabs();
+
         return $readySolution->update($this->request->all());
+    }
+
+    private function syncTabs(): void
+    {
+        if ($this->request->post('tabs')) {
+            ReadySolutionTab::where('rs_id', $this->id)->delete();
+            foreach ($this->request->post('tabs') as $key => $value) {
+                if ($value) {
+                    ReadySolutionTab::create([
+                        'rs_id' => $this->id,
+                        'tab_id' => intval($key),
+                        'value' => (string)$value
+                    ]);
+                }
+            }
+        }
     }
 
 }

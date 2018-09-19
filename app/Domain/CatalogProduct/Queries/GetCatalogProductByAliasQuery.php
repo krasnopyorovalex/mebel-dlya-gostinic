@@ -29,10 +29,12 @@ class GetCatalogProductByAliasQuery
      */
     public function handle()
     {
-        return CatalogProduct::where('alias', $this->alias)->with(['images', 'originTabs', 'relativeProducts' => function ($query) {
+        return CatalogProduct::where('alias', $this->alias)->with(['images' => function ($query) {
+            return $query->where('is_published', '1');
+        }, 'originTabs', 'relativeProducts' => function ($query) {
             return $query->with(['images']);
         }, 'catalog' => function ($query) {
             return $query->with(['catalog']);
-        }])->firstOrFail();
+        }])->where('is_published', '1')->firstOrFail();
     }
 }

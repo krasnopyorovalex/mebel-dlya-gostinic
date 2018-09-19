@@ -3,7 +3,10 @@
 namespace App\Http\Middleware;
 
 use App\Domain\Article\Queries\GetAllArticlesQuery;
+use App\Domain\Catalog\Queries\GetAllCatalogsQuery;
 use App\Domain\Gallery\Queries\GetAllGalleriesQuery;
+use App\Domain\Page\Queries\GetAllPagesQuery;
+use App\Domain\ReadySolution\Queries\GetAllReadySolutionsQuery;
 use Closure;
 use Illuminate\Http\Response;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -39,6 +42,24 @@ class ShortCodeMiddleware
                     $portfolios = $this->dispatch(new GetAllGalleriesQuery(true));
 
                     return view('layouts.partials.for_shortcodes.portfolio_list', ['portfolios' => $portfolios]);
+                },
+                '#(<p(.*)>)?{ready_solutions}(<\/p>)?#' => function () {
+                    $readySolutions = $this->dispatch(new GetAllReadySolutionsQuery(false, true));
+
+                    return view('layouts.partials.ready_solutions', ['readySolutions' => $readySolutions]);
+                },
+                '#(<p(.*)>)?{sitemap}(<\/p>)?#' => function () {
+                    $pages = $this->dispatch(new GetAllPagesQuery(true));
+                    $readySolutions = $this->dispatch(new GetAllReadySolutionsQuery(false, true));
+                    $articles = $this->dispatch(new GetAllArticlesQuery(false, false, true));
+                    $catalogs = $this->dispatch(new GetAllCatalogsQuery());
+
+                    return view('layouts.partials.for_shortcodes.sitemap', [
+                        'pages' => $pages,
+                        'readySolutions' => $readySolutions,
+                        'articles' => $articles,
+                        'catalogs' => $catalogs
+                    ]);
                 }
             ],
             $response->content()

@@ -31,11 +31,21 @@
                             @input(['name' => 'description', 'label' => 'Description'])
                             @input(['name' => 'keywords', 'label' => 'Keywords'])
                             @input(['name' => 'alias', 'label' => 'Alias'])
+                            @input(['name' => 'price', 'label' => 'Цена', 'defaultValue' => 0])
                             @imageInput(['name' => 'image', 'type' => 'file', 'label' => 'Выберите изображение на компьютере'])
 
                             @textarea(['name' => 'text', 'label' => 'Текст'])
                             @checkbox(['name' => 'in_main', 'label' => 'Отображать на главной?', 'isChecked' => true])
                             @checkbox(['name' => 'is_published', 'label' => 'Опубликовано?', 'isChecked' => true])
+                            <hr>
+                            <h3>Табы</h3>
+
+                            @foreach ($tabs as $tab)
+                                <div class="form-group">
+                                    <label for="editor-full-tab-{{ $tab->id }}">{{ $tab->name }}:</label>
+                                    <textarea class="form-control border-blue border-xs tabs__editor" rows="" id="editor-full-tab-{{ $tab->id }}" name="tabs[{{ $tab->id }}]"></textarea>
+                                </div>
+                            @endforeach
 
                             @submit_btn()
                         </div>
