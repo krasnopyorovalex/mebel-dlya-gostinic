@@ -10,11 +10,28 @@ use App\Page;
  */
 class GetAllPagesQuery
 {
+    private $isPublished;
+
+    /**
+     * GetAllPagesQuery constructor.
+     * @param bool $isPublished
+     */
+    public function __construct(bool $isPublished = false)
+    {
+        $this->isPublished = $isPublished;
+    }
+
     /**
      * Execute the job.
      */
     public function handle()
     {
-        return Page::all();
+        $query = new Page();
+
+        if ($this->isPublished) {
+            $query->where('is_published', '1');
+        }
+
+        return $query->get();
     }
 }

@@ -12,16 +12,19 @@ class GetAllArticlesQuery
 {
     private $limit;
     private $paginate;
+    private $isPublished;
 
     /**
      * GetAllArticlesQuery constructor.
      * @param bool $limit
      * @param bool $paginate
+     * @param bool $isPublished
      */
-    public function __construct($limit = false, $paginate = false)
+    public function __construct(bool $limit = false, bool $paginate = false, bool $isPublished = false)
     {
         $this->limit = $limit;
         $this->paginate = $paginate;
+        $this->isPublished = $isPublished;
     }
 
     /**
@@ -37,6 +40,10 @@ class GetAllArticlesQuery
 
         if ($this->paginate) {
             return $articles->paginate(5);
+        }
+
+        if ($this->isPublished) {
+            $articles->where('is_published', '1');
         }
 
         return $articles->get();

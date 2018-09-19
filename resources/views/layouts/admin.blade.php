@@ -86,7 +86,6 @@
                             <li><a href="{{ route('admin.why_wes.index') }}"><i class="icon-question7"></i> <span>Почему мы?</span></a></li>
                             <li><a href="{{ route('admin.partners.index') }}"><i class="icon-collaboration"></i> <span>С кем мы работаем</span></a></li>
                             <li><a href="{{ route('admin.banners.index') }}"><i class="icon-images3"></i> <span>Баннеры</span></a></li>
-                            <li><a href="{{ route('admin.services.index') }}"><i class="icon-list"></i> <span>Услуги</span></a></li>
                             <li><a href="{{ route('admin.articles.index') }}"><i class="icon-magazine"></i> <span>Статьи</span></a></li>
                             <li><a href="{{ route('admin.guestbooks.index') }}"><i class="icon-bubble2"></i> <span>Отзывы</span></a></li>
                             <li><a href="{{ route('admin.tabs.index') }}"><i class="icon-new-tab2"></i> <span>Табы для товаров</span></a></li>

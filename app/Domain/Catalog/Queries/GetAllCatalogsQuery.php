@@ -26,7 +26,9 @@ class GetAllCatalogsQuery
      */
     public function handle()
     {
-        $query = Catalog::with(['catalogs'])->where('parent_id', null)->orderBy('pos');
+        $query = Catalog::with(['catalogs' => function ($query) {
+            return $query->with('products');
+        }, 'products'])->where('parent_id', null)->orderBy('pos');
 
         if ($this->excludeCatalog) {
             return $query->where('id', '<>', $this->excludeCatalog->id)->get();
