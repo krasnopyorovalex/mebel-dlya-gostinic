@@ -6,14 +6,18 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class RecallSended extends Mailable
+/**
+ * Class PluginSended
+ * @package App\Mail
+ */
+class PluginSended extends Mailable
 {
     use Queueable, SerializesModels;
 
     private $data;
 
     /**
-     * RecallSended constructor.
+     * PluginSended constructor.
      * @param $data
      */
     public function __construct($data)
@@ -29,8 +33,8 @@ class RecallSended extends Mailable
     public function build()
     {
         return $this->from('sanya-sliver@yandex.ru')
-            ->subject('Форма: перезвоните мне')
-            ->view('emails.recall', [
+            ->subject('Форма: плагин-опросник')
+            ->view('emails.plugin', [
                 'data' => $this->data
             ]);
     }

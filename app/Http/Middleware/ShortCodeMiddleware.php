@@ -50,6 +50,9 @@ class ShortCodeMiddleware
 
                     return view('layouts.partials.ready_solutions', ['readySolutions' => $readySolutions]);
                 },
+                '#(<p(.*)>)?{plugin}(<\/p>)?#' => function () {
+                    return view('layouts.partials.plugin');
+                },
                 '#(<p(.*)>)?{our_works}(<\/p>)?#' => function () {
                     $galleries = $this->dispatch(new GetAllGalleriesQuery(true));
 

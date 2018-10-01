@@ -31,15 +31,15 @@
                     <form class="rd-mailform rd-mailform_style-1" action="{{ route('contact.send') }}" method="post">
                         @csrf
                         <div class="form-wrap">
-                            <input class="form-input" id="contact-name" type="text" name="name">
+                            <input class="form-input" id="contact-name" type="text" name="name" minlength="3" required>
                             <label class="form-label" for="contact-name">Ваше имя</label>
                         </div>
                         <div class="form-wrap">
-                            <input class="form-input" id="contact-email" type="email" name="email">
+                            <input class="form-input" id="contact-email" type="email" name="email" required>
                             <label class="form-label" for="contact-email">E-mail</label>
                         </div>
                         <div class="form-wrap">
-                            <input class="form-input" id="contact-phone" type="text" name="phone">
+                            <input class="form-input" id="contact-phone" type="text" name="phone" required>
                             <label class="form-label" for="contact-phone">Ваш телефон</label>
                         </div>
                         <div class="form-wrap">

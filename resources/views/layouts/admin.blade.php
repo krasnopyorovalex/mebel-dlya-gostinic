@@ -171,6 +171,7 @@
                     <li>Наши работы - {our_works}</li>
                     <li>Почему мы - {why_wes}</li>
                     <li>Отзывы на главной - {guestbook}</li>
+                    <li>Плагин-опросник - {plugin}</li>
                 </ul>
             </div>
 

@@ -1,0 +1,363 @@
+.wizard {
+  width: 100%;
+  overflow: hidden;
+}
+.wizard > .steps .current-info,
+.wizard > .content > .title {
+  position: absolute;
+  left: -99999px;
+}
+.wizard > .content {
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  padding: 0;
+}
+.wizard > .content > .body {
+  padding: 20px;
+  min-height: 210px;
+}
+.wizard > .steps {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.wizard > .steps > ul {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wizard > .steps > ul > li {
+  display: table-cell;
+  width: auto;
+  vertical-align: top;
+  text-align: center;
+  position: relative;
+}
+.wizard > .steps > ul > li a {
+  position: relative;
+  padding-top: 48px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+.wizard > .steps > ul > li:before,
+.wizard > .steps > ul > li:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 43px;
+  width: 50%;
+  height: 2px;
+  background-color: #00BCD4;
+  z-index: 9;
+}
+.wizard > .steps > ul > li:before {
+  left: 0;
+}
+.wizard > .steps > ul > li:after {
+  right: 0;
+}
+.wizard > .steps > ul > li:first-child:before,
+.wizard > .steps > ul > li:last-child:after {
+  content: none;
+}
+.wizard > .steps > ul > li.current:after,
+.wizard > .steps > ul > li.current ~ li:before,
+.wizard > .steps > ul > li.current ~ li:after {
+  background-color: #eeeeee;
+}
+.wizard > .steps > ul > li.current > a {
+  color: #333333;
+  cursor: default;
+  outline: none;
+  line-height: normal;
+  font-size: 14px;
+}
+.wizard > .steps > ul > li.current .number {
+  font-size: 0;
+  border-color: #00BCD4;
+  background-color: #fff;
+  color: #00BCD4;
+}
+.wizard > .steps > ul > li.current .number:after {
+  content: '\e913';
+  font-family: 'icomoon';
+  display: inline-block;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 34px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.wizard > .steps > ul > li.disabled a,
+.wizard > .steps > ul > li.disabled a:hover,
+.wizard > .steps > ul > li.disabled a:focus {
+  color: #999999;
+  cursor: default;
+  font-size: 14px;
+  line-height: normal;
+}
+.wizard > .steps > ul > li.done a,
+.wizard > .steps > ul > li.done a:hover,
+.wizard > .steps > ul > li.done a:focus {
+  color: #999999;
+}
+.wizard > .steps > ul > li.done .number {
+  font-size: 0;
+  background-color: #00BCD4;
+  border-color: #00BCD4;
+  color: #fff;
+}
+.wizard > .steps > ul > li.done .number:after {
+  content: '\ed6f';
+  font-family: 'icomoon';
+  display: inline-block;
+  font-size: 16px;
+  line-height: 34px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.wizard > .steps > ul > li.error .number {
+  border-color: #F44336;
+  color: #F44336;
+}
+@media (max-width: 768px) {
+  .wizard > .steps > ul {
+    margin-bottom: 20px;
+  }
+  .wizard > .steps > ul > li {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+  .wizard > .steps > ul > li > a {
+    margin-bottom: 0;
+  }
+  .wizard > .steps > ul > li:first-child:before,
+  .wizard > .steps > ul > li:last-child:after {
+    content: '';
+  }
+  .wizard > .steps > ul > li:last-child:after {
+    background-color: #00BCD4;
+  }
+}
+@media (max-width: 480px) {
+  .wizard > .steps > ul > li {
+    width: 100%;
+  }
+  .wizard > .steps > ul > li.current:after {
+    background-color: #00BCD4;
+  }
+}
+.wizard > .steps .number {
+  background-color: #fff;
+  color: #ccc;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -19px;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #eeeeee;
+  font-size: 14px;
+  border-radius: 50%;
+  z-index: 10;
+  line-height: 34px;
+  text-align: center;
+}
+.panel-flat > .wizard > .steps > ul {
+  border-top: 1px solid #ddd;
+}
+.wizard > .actions {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 0 20px 20px;
+}
+.wizard > .actions > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wizard > .actions > ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.wizard > .actions > ul > li + li {
+  margin-left: 10px;
+}
+.wizard > .actions > ul > li > a {
+  background-color: transparent;
+  border: 1px solid #e0e0e2;
+  padding: 16px 40px;
+  font-size: 12px;
+  line-height: 24px;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  border-radius: 3px;
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: .06em;
+  transition: .33s all ease;
+  white-space: normal;
+  cursor: pointer;
+  text-align: center;
+  color: #000;
+}
+.wizard > .actions > ul > li > a:hover, .wizard > .actions > ul > li > a:focus, .wizard > .actions > ul > li > a:active, .wizard > .actions > ul > li > a:hover,
+.wizard > .actions > ul > li > a:hover,
+.wizard > .actions > ul > li > a:focus,
+.wizard > .actions > ul > li > a:active,
+.wizard > .actions > ul > li > a:hover {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.wizard > .actions > ul > li > a:hover,
+.wizard > .actions > ul > li > a:focus {
+  -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.05) inset;
+  box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.05) inset;
+}
+.wizard > .actions > ul > li > a:active {
+  -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+.wizard > .actions > ul > li > a[href="#previous"] {
+  background-color: #fcfcfc;
+  color: #333;
+  border: 1px solid #ddd;
+  display: none;
+}
+.wizard > .actions > ul > li > a[href="#previous"]:hover,
+.wizard > .actions > ul > li > a[href="#previous"]:focus {
+  -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.01) inset;
+  box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.01) inset;
+}
+.wizard > .actions > ul > li > a[href="#previous"]:active {
+  -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.03) inset;
+  box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.03) inset;
+}
+.wizard > .actions > ul > li.disabled > a,
+.wizard > .actions > ul > li.disabled > a:hover,
+.wizard > .actions > ul > li.disabled > a:focus {
+  color: #999999;
+}
+.wizard > .actions > ul > li.disabled > a[href="#previous"],
+.wizard > .actions > ul > li.disabled > a[href="#previous"]:hover,
+.wizard > .actions > ul > li.disabled > a[href="#previous"]:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.steps-basic .item__type {
+  width: 174px;
+  display: inline-block;
+  color: #000;
+  background-color: transparent;
+  position: relative;
+  border: 1px solid #e0e0e2;
+  border-radius: 3px;
+  padding: 12px 30px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  transition: .33s all ease;
+  white-space: normal;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+}
+.steps-basic .item__type.active {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+.steps-basic .step__name {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 20px;
+}
+.steps-basic .form-group {
+  text-align: center;
+}
+.steps-basic .form-group input{
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  border: 1px solid #e0e0e2;
+  border-radius: 3px;
+  padding: 12px 30px;
+  margin: 1em 0;
+  min-width: 250px;
+}
+.steps-basic .cat__room {
+  display: inline-block;
+  position: relative;
+  border: 2px solid #000;
+  max-width: 250px;
+}
+.steps-basic .cat__room > div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  background-color: rgba(0,0,0,0.65);
+  font-size: 16px;
+  color: #ffffff;
+  padding: 4px 0;
+}
+.steps-basic .cat__room:hover {
+  cursor: pointer;
+}
+.steps-basic .cat__room:hover > div{
+  background-color: rgba(0,0,0,0.9);
+}
+.steps-basic .cat__room .checkbox {
+  display: none;
+}
+.steps-basic .cat__room.checked > div:before {
+  content: '\ed6f';
+  font-family: 'icomoon';
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.steps-basic .param__box label {
+  width: 40%;
+  text-align: left;
+}
+.steps-basic .param__box + .param__box {
+  border-top: 1px solid #e0e0e2;
+}
+.step-basic .actions ul li:first-child {
+  display: none;
+}
+.steps-basic .message {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #e0e0e2;
+}
+.steps-basic .message:empty {
+  display: none;
+}
