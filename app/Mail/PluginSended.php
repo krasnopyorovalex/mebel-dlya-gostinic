@@ -33,7 +33,7 @@ class PluginSended extends Mailable
     public function build()
     {
         return $this->from('sanya-sliver@yandex.ru')
-            ->subject('Форма: плагин-опросник')
+            ->subject('Заявка на заказ мебели')
             ->view('emails.plugin', [
                 'data' => $this->data
             ]);

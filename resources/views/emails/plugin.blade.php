@@ -2,14 +2,14 @@
 <p>Город: {{ $data['city'] }}</p>
 <p>Имя: {{ $data['name'] }}</p>
 @if (count($data['cat__rooms']))
-    <p>Категория номеров:</p>
+    <p>Категории номеров:</p>
     <ol>
     @foreach ($data['cat__rooms'] as $room)
         <li>{{ $room }}</li>
     @endforeach
     </ol>
 @endif
-<p>количество номеров: {{ $data['count'] }}</p>
+<p>Количество номеров: {{ $data['count'] }}</p>
 @if (count($data['param']))
     <p>Комплектация одного номера:</p>
     <ul>

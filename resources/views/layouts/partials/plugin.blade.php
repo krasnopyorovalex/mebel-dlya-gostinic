@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/icomoon/styles.css') }}">
 <link rel="stylesheet" href="{{ asset('css/form_wizard.css') }}">
 <form class="steps-basic" action="{{ route('plugin.send') }}">
+    @csrf
     <div class="title"></div>
     <fieldset>
         <div class="row">
@@ -93,7 +94,7 @@
             <div class="col-md-12">
                 <div class="step__name"><span class="name__name"></span>, какое  количество номеров вам необходимо?</div>
                 <div class="form-group">
-                    <input type="text" name="count" class="required__field" placeholder="" onkeyup="this.value = this.value.replace (/[^0-9+]/, '')" maxlength="3">
+                    <input type="text" name="count" class="required__field" placeholder="" onkeyup="this.value = this.value.replace (/[^0-9+]/, '')" maxlength="5">
                 </div>
             </div>
         </div>
@@ -187,6 +188,8 @@
                     <div class="message"></div>
                     <input type="text" name="phone" class="phone" autocomplete="off" placeholder="Пример: +7 (978) 111-11-11">
                     <input type="email" name="email" class="email" autocomplete="off" placeholder="Пример: info@mebel-compass.com">
+                    <p><span class="name__name"></span>, мы подберем для Вас наши работы по номерам категории <span class="cat__rooms-checked"></span>.
+                        Наш менеджер подготовит коммерческое предложение и свяжется с Вами в ближайшее время.</p>
                 </div>
             </div>
         </div>

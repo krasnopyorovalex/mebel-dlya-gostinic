@@ -35,7 +35,7 @@ $(function() {
                 if ( input.val().length < 3) {
                     return false;
                 }
-                formData.setValue(input.attr("name"), input.val(), $("span." + input.attr("name") + "__name"));
+                formData.setValue(input.attr("name"), input.val(), stepBasic.find("span." + input.attr("name") + "__name"));
             }
             if (currentIndex === 3) {
                 var checkedElms = stepBasic.find('input:checkbox:checked').length;
@@ -83,7 +83,18 @@ $(function() {
     stepBasic.on("click", ".cat__room", function () {
         var _this = $(this);
         _this.toggleClass('checked');
-        return _this.find(".checkbox input").prop('checked', true);
+        if(_this.hasClass('checked')) {
+            _this.find(".checkbox input").prop('checked', true);
+        } else {
+            _this.find(".checkbox input").prop('checked', false);
+        }
+
+        var checked = [],
+            checkboxText = stepBasic.find(".cat__rooms-checked");
+        stepBasic.find('input:checkbox:checked').map(function(key, element) {
+            return checked.push(element.value);
+        });
+        return checkboxText.text(checked.join(', '));
     });
 
     var formData = {
