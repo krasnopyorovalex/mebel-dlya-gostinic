@@ -37,7 +37,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="slick-slider" id="child-carousel" data-for=".carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="3" data-xs-items="4" data-sm-items="4" data-md-items="4" data-lg-items="4" data-xl-items="5" data-slide-to-scroll="1">
+                        <div class="slick-slider" id="child-carousel" data-for=".carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="3" data-xs-items="4" data-sm-items="8" data-md-items="8" data-lg-items="8" data-xl-items="9" data-slide-to-scroll="1">
                             @foreach ($readySolution->images as $image)
                                 <div class="item">
                                     <img src="{{ asset('storage/rs/' . $readySolution->id . '/' . $image->basename . '_thumb.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}" width="89" height="89"/>
