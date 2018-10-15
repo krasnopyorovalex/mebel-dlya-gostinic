@@ -64,22 +64,22 @@
                 <div class="step__name"><span class="name__name"></span>, выберете категории номеров, которые вас интересуют.</div>
                 <div class="form-group">
                     <div class="cat__room">
-                        <img src="{{ asset('images/cat__rooms/room_hotel_compass-style_1-172x172-16c.png') }}" alt="">
+                        <img src="{{ asset('images/cat__rooms/ekonom.jpg') }}" alt="">
                         <div>Эконом</div>
                         <div class="checkbox"><input type="checkbox" name="cat__rooms[]" value="Эконом"></div>
                     </div>
                     <div class="cat__room">
-                        <img src="{{ asset('images/cat__rooms/room_hotel_compass-style_2-172x172-3f7.png') }}" alt="">
+                        <img src="{{ asset('images/cat__rooms/standart.jpg') }}" alt="">
                         <div>Стандарт</div>
                         <div class="checkbox"><input type="checkbox" name="cat__rooms[]" value="Стандарт"></div>
                     </div>
                     <div class="cat__room">
-                        <img src="{{ asset('images/cat__rooms/room_hotel_compass-style_2-172x172-3f7.png') }}" alt="">
+                        <img src="{{ asset('images/cat__rooms/komfort.jpg') }}" alt="">
                         <div>Комфорт</div>
                         <div class="checkbox"><input type="checkbox" name="cat__rooms[]" value="Комфорт"></div>
                     </div>
                     <div class="cat__room">
-                        <img src="{{ asset('images/cat__rooms/room_hotel_compass-style_4-172x172-3f3.png') }}" alt="">
+                        <img src="{{ asset('images/cat__rooms/luks.jpg') }}" alt="">
                         <div>Люкс</div>
                         <div class="checkbox"><input type="checkbox" name="cat__rooms[]" value="Люкс"></div>
                     </div>

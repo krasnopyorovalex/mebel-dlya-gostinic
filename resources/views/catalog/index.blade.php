@@ -32,7 +32,7 @@
                                         <div class="product product-grid">
                                             @if ($product->images->first())
                                                 <div class="product-img-wrap">
-                                                    <a href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">
+                                                    <a target="_blank" href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">
                                                         <img src="{{ asset('storage/product/' . $product->id . '/' . $product->images->first()->basename . '.' . $product->images->first()->ext) }}" alt="{{ $product->images->first()->alt }}" title="{{ $product->images->first()->title }}" width="300" height="300"/>
                                                     </a>
                                                 </div>
@@ -42,7 +42,7 @@
                                             @endif
                                             <div class="product-caption">
                                                 <div class="product-title heading-6">
-                                                    <a href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">{{ $product->name }}</a>
+                                                    <a target="_blank" href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">{{ $product->name }}</a>
                                                 </div>
                                                 @if ($product->price)
                                                 <p class="product-price"><span>{{ number_format($product->price, 0, '', ' ') }}</span></p>
@@ -63,14 +63,14 @@
                                     <div class="product product-grid">
                                         @if ($catalogItem->image)
                                         <div class="product-img-wrap">
-                                            <a href="{{ route('catalog.sub', ['catalog' => $catalog->alias, 'alias' => $catalogItem->alias]) }}">
+                                            <a target="_blank" href="{{ route('catalog.sub', ['catalog' => $catalog->alias, 'alias' => $catalogItem->alias]) }}">
                                                 <img src="{{ $catalogItem->image->path }}" alt="{{ $catalogItem->image->alt }}" title="{{ $catalogItem->image->title }}" width="300" height="300"/>
                                             </a>
                                         </div>
                                         @endif
                                         <div class="product-caption">
                                             <div class="product-title heading-6">
-                                                <a href="{{ route('catalog.sub', ['catalog' => $catalog->alias, 'alias' => $catalogItem->alias]) }}">{{ $catalogItem->name }}</a>
+                                                <a target="_blank" href="{{ route('catalog.sub', ['catalog' => $catalog->alias, 'alias' => $catalogItem->alias]) }}">{{ $catalogItem->name }}</a>
                                             </div>
                                         </div>
                                     </div>

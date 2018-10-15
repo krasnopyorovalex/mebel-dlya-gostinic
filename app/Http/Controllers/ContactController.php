@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Forms\ContactRequest;
 use App\Mail\ContactFormSended;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Http\Request;
 
 /**
  * Class ContactController
@@ -13,12 +13,12 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
     /**
-     * @param Request $request
+     * @param ContactRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function send(Request $request)
+    public function send(ContactRequest $request)
     {
-        Mail::to(['djShtaket88@mail.ru', 'info@krasber.ru'])->send(new ContactFormSended($request->all()));
+        Mail::to(['hotel@mebel-compass.com'])->send(new ContactFormSended($request->all()));
 
         $request->session()->flash('status', 'Благодарим за вашу заявку. Наш менеджер свяжется с вами в ближайшее время');
 

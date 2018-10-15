@@ -28,7 +28,7 @@ class ProductOrdered extends Mailable
      */
     public function build()
     {
-        return $this->from('sanya-sliver@yandex.ru')
+        return $this->from('kompas.mebel@ya.ru')
             ->subject('Форма запроса стоимости')
             ->view('emails.product', [
                 'data' => $this->data

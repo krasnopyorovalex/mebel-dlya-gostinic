@@ -2081,7 +2081,7 @@ $document.ready(function () {
 
     lightbox.option({
         'albumLabel': 'Изображение %1 из %2'
-    })
+    });
 
     var portfolioItems = $('.portfolio__items');
     if(portfolioItems.length) {
@@ -2108,3 +2108,5 @@ $document.ready(function () {
         return $(this).closest('#form-output-global').fadeOut();
     });
 });
+
+//document.oncontextmenu = function (){return false};

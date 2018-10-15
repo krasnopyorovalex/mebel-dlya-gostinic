@@ -6,7 +6,7 @@ use App\Http\Requests\Request;
 
 /**
  * Class PluginRequest
- * @package Domain\AboutCount\Requests
+ * @package App\Http\Requests\Forms
  */
 class PluginRequest extends Request
 {

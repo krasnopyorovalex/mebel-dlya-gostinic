@@ -28,7 +28,7 @@ class RecallSended extends Mailable
      */
     public function build()
     {
-        return $this->from('sanya-sliver@yandex.ru')
+        return $this->from('kompas.mebel@ya.ru')
             ->subject('Форма: перезвоните мне')
             ->view('emails.recall', [
                 'data' => $this->data

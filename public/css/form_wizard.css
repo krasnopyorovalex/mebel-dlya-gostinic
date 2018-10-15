@@ -310,6 +310,9 @@
   border: 2px solid #000;
   max-width: 250px;
 }
+.steps-basic .cat__room > img {
+    height: 185px
+}
 .steps-basic .cat__room > div {
   position: absolute;
   bottom: 0;

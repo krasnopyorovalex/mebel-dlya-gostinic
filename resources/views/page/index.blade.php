@@ -67,14 +67,14 @@
     </section>
 
     <section class="recall__me">
-        <div class="title__form heading-4">Перезвоните мне</div>
+        <div class="title__form heading-4">Заказать обратный звонок</div>
         <form action="{{ route('recall.send') }}" method="post" id="recall-form">
             @csrf
             <div class="form-group form-wrap_icon linear-icon-man">
                 <input type="text" class="name__filed form-input" value="" placeholder="Ваше имя" name="name" required>
             </div>
-            <div class="form-group form-wrap_icon linear-icon-envelope">
-                <input type="email" class="email__field form-input" value="" placeholder="Ваш e-mail" name="email" required>
+            <div class="form-group form-wrap_icon linear-icon-phone-bubble">
+                <input type="text" class="email__field form-input" value="" onkeyup="this.value = this.value.replace (/[^0-9+]/, '')" placeholder="Ваш телефон" name="phone" required>
             </div>
             <div class="form-group">
                 <button class="button button-black" type="submit">Отправить</button>
@@ -97,7 +97,7 @@
 
     @includeWhen($whyWes, 'layouts.partials.why_we', ['whyWes' => $whyWes])
 
-    <section class="section-limit bg-gray-lighter bg-image css__custom-banner" style="background-image: url({{ $banners->get(1)->image->path }})">
+    <section class="section-limit bg-gray-lighter bg-image css__custom-banner" style="background-image: url({{ $banners->get(2)->image->path }})">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-lg-5 section-lg">

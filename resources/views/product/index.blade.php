@@ -164,7 +164,7 @@
                         </div>
 
                         <div class="form-wrap form-wrap_icon linear-icon-telephone">
-                            <input class="form-input" id="modal-register-phone" type="phone" name="phone" autocomplete="off">
+                            <input class="form-input" id="modal-register-phone" type="text" name="phone" autocomplete="off" onkeyup="this.value = this.value.replace (/[^0-9+]/, '')">
                             <label class="form-label" for="modal-register-phone">Телефон</label>
                         </div>
 

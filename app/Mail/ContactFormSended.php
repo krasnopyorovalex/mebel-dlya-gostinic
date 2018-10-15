@@ -5,7 +5,6 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ContactFormSended extends Mailable
 {
@@ -29,7 +28,7 @@ class ContactFormSended extends Mailable
      */
     public function build()
     {
-        return $this->from('sanya-sliver@yandex.ru')
+        return $this->from('kompas.mebel@ya.ru')
             ->subject('Форма: страница контактов')
             ->view('emails.contact', [
                 'data' => $this->data

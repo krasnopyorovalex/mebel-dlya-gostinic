@@ -39,7 +39,7 @@
                             <label class="form-label" for="contact-email">E-mail</label>
                         </div>
                         <div class="form-wrap">
-                            <input class="form-input" id="contact-phone" type="text" name="phone" required>
+                            <input class="form-input" id="contact-phone" onkeyup="this.value = this.value.replace (/[^0-9+]/, '')" type="text" name="phone" required>
                             <label class="form-label" for="contact-phone">Ваш телефон</label>
                         </div>
                         <div class="form-wrap">
