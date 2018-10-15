@@ -17,10 +17,10 @@
                 @if (count($portfolio->images))
                     <div class="row justify-content-sm-center portfolio__items-{{ $portfolio->id }}">
                         @foreach ($portfolio->images as $image)
-                            <div class="col-md-4 col-xl-3">
+                            <div class="col-md-4 col-xl-4">
                                 <div class="product product-grid">
                                     <div class="product-img-wrap">
-                                        @if ($loop->index > 3)
+                                        @if ($loop->index > 2)
                                             <a href="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" data-lightbox="portfolio-{{ $portfolio->id }}"  data-title="{{ $image->name }}">
                                                 <img src="#" class="must__show" data-src="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}" width="300" height="300">
                                             </a>

@@ -22,7 +22,7 @@
     <section class="section-sm bg-default">
         <div class="container">
             <div class="row row-60">
-                <div class="col-md-6 col-lg-5">
+                <div class="col-md-8 col-lg-8">
                 @if (count($readySolution->images))
                     <!-- Slick Carousel-->
                         <div class="slick-slider carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="1" data-child="#child-carousel" data-for="#child-carousel" data-photo-swipe-gallery="gallery">
@@ -46,7 +46,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="col-md-6 col-lg-7">
+                <div class="col-md-4 col-lg-4">
                     <div class="product-single">
                         <div class="heading-4">{{ $readySolution->name }}</div>
                         @if ($readySolution->price)
@@ -98,7 +98,7 @@
     @if (count($readySolution->relativeProducts))
         <section class="section-sm bg-default">
             <div class="container text-center">
-                <div class="heading-5">Сопутствующие товары</div>
+                <div class="heading-5">Вас может заинтересовать</div>
                 <!-- Owl Carousel-->
                 <div class="owl-carousel carousel-product" data-items="1" data-md-items="2" data-lg-items="3" data-xl-items="4" data-stage-padding="0" data-loop="false" data-margin="50" data-mouse-drag="false" data-nav="true">
                     @foreach ($readySolution->relativeProducts as $relativeProduct)
@@ -160,7 +160,7 @@
                         </div>
 
                         <div class="form-wrap form-wrap_icon linear-icon-telephone">
-                            <input class="form-input" id="modal-register-phone" type="phone" name="phone" autocomplete="off">
+                            <input class="form-input" id="modal-register-phone" type="text" name="phone" autocomplete="off" onkeyup="this.value = this.value.replace (/[^0-9+]/, '')">
                             <label class="form-label" for="modal-register-phone">Телефон</label>
                         </div>
 

@@ -102,7 +102,7 @@
     @if (count($product->relativeProducts))
         <section class="section-sm bg-default">
             <div class="container text-center">
-                <div class="heading-5">Сопутствующие товары</div>
+                <div class="heading-5">Вас может заинтересовать</div>
                 <!-- Owl Carousel-->
                 <div class="owl-carousel carousel-product" data-items="1" data-md-items="2" data-lg-items="3" data-xl-items="4" data-stage-padding="0" data-loop="false" data-margin="50" data-mouse-drag="false" data-nav="true">
                     @foreach ($product->relativeProducts as $relativeProduct)

@@ -12,7 +12,7 @@
 
     @includeWhen($countAbout, 'layouts.partials.count_about', ['countAbout' => $countAbout])
 
-    <section class="section-limit bg-gray-lighter bg-image css__custom-banner" style="background-image: url({{ $banners->get(1)->image->path }})">
+    <section class="section-limit bg-gray-lighter bg-image" style="background-image: url({{ $banners->get(1)->image->path }})">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-lg-5 section-lg">
@@ -73,7 +73,7 @@
             <div class="form-group form-wrap_icon linear-icon-man">
                 <input type="text" class="name__filed form-input" value="" placeholder="Ваше имя" name="name" required>
             </div>
-            <div class="form-group form-wrap_icon linear-icon-phone-bubble">
+            <div class="form-group form-wrap_icon linear-icon-telephone">
                 <input type="text" class="email__field form-input" value="" onkeyup="this.value = this.value.replace (/[^0-9+]/, '')" placeholder="Ваш телефон" name="phone" required>
             </div>
             <div class="form-group">
@@ -97,7 +97,7 @@
 
     @includeWhen($whyWes, 'layouts.partials.why_we', ['whyWes' => $whyWes])
 
-    <section class="section-limit bg-gray-lighter bg-image css__custom-banner" style="background-image: url({{ $banners->get(2)->image->path }})">
+    <section class="section-limit bg-gray-lighter bg-image" style="background-image: url({{ $banners->get(2)->image->path }})">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-lg-5 section-lg">
@@ -141,7 +141,7 @@
     <section class="section-lg bg-default partners__box">
         <div class="container text-center">
             <div class="heading-4">
-                С нами работают
+                Наши клиенты
             </div>
             <!-- Bootstrap tabs-->
             <div class="tabs-custom tabs-vertical row no-gutters">

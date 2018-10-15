@@ -2,8 +2,6 @@
 
 namespace App\Services;
 
-use Illuminate\Support\Str;
-
 /**
  * Class LinkGeneratorService
  * @package App\Services
@@ -18,6 +16,7 @@ class LinkGeneratorService
         'App\Service' => 'Услуги',
         'App\Article' => 'Статьи',
         'App\Catalog' => 'Категории каталога',
+        'App\ReadySolution' => 'Готовые решения',
     ];
 
     /**
@@ -34,7 +33,7 @@ class LinkGeneratorService
 
             try {
                 $reflectionClass = (new \ReflectionClass($key))->newInstance();
-                $module = Str::lower(class_basename($reflectionClass));
+                $module = snake_case(class_basename($reflectionClass));
                 if ($module == 'catalog') {
                     $collection = $reflectionClass::where('parent_id', null)->with(['catalogs'])->get();
                 } else {
