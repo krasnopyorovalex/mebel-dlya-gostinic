@@ -22,11 +22,11 @@
                                     <div class="product-img-wrap">
                                         @if ($loop->index > 2)
                                             <a href="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" data-lightbox="portfolio-{{ $portfolio->id }}"  data-title="{{ $image->name }}">
-                                                <img src="#" class="must__show" data-src="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}" width="300" height="300">
+                                                <img src="#" class="must__show" data-src="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}">
                                             </a>
                                         @else
                                             <a href="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" data-lightbox="portfolio-{{ $portfolio->id }}">
-                                                <img src="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}" width="300" height="300">
+                                                <img src="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}">
                                             </a>
                                         @endif
                                     </div>
