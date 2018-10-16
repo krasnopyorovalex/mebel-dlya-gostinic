@@ -11,8 +11,8 @@
 |
 */
 
-Route::pattern('alias', '[a-z-]+');
-Route::pattern('catalog', '[a-z-]+');
+Route::pattern('alias', '[а-яa-z-]+');
+Route::pattern('catalog', '[а-яa-z-]+');
 
 Auth::routes();
 
@@ -24,13 +24,12 @@ Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
 
 Route::group(['middleware' => ['redirector', 'shortcode']], function () {
     Route::get('/{alias?}', 'PageController@show')->name('page.show');
-    Route::get('articles/{alias}', 'ArticleController@show')->name('article.show');
-    Route::get('services/{alias}', 'ServiceController@show')->name('service.show');
-    Route::get('services/{alias}', 'ServiceController@show')->name('service.show');
-    Route::get('catalogs/{alias}', 'CatalogController@show')->name('catalog.show');
-    Route::get('catalogs/{catalog}/{alias}', 'CatalogController@sub')->name('catalog.sub');
-    Route::get('product/{alias}', 'CatalogProductController@show')->name('catalog_product.show');
-    Route::get('ready-solutions/{alias}', 'ReadySolutionController@show')->name('ready_solution.show');
+    Route::get('статьи/{alias}', 'ArticleController@show')->name('article.show');
+    Route::get('услуги/{alias}', 'ServiceController@show')->name('service.show');
+    Route::get('каталог/{alias}', 'CatalogController@show')->name('catalog.show');
+    Route::get('каталог/{catalog}/{alias}', 'CatalogController@sub')->name('catalog.sub');
+    Route::get('продукт/{alias}', 'CatalogProductController@show')->name('catalog_product.show');
+    Route::get('готовые-решения/{alias}', 'ReadySolutionController@show')->name('ready_solution.show');
 });
 
 Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], function () {

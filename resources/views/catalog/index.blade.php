@@ -12,7 +12,7 @@
                 <p class="breadcrumbs-custom__title"></p>
                 <ul class="breadcrumbs-custom__path">
                     <li><a href="{{ route('page.show') }}">Главная</a></li>
-                    <li><a href="{{ route('page.show', ['alias' => 'catalog']) }}">Каталог</a></li>
+                    <li><a href="{{ route('page.show', ['alias' => 'каталог']) }}">Каталог</a></li>
                     <li class="active">{{ $catalog->name }}</li>
                 </ul>
             </div>

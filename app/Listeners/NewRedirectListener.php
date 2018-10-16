@@ -23,8 +23,8 @@ class NewRedirectListener
         $this->checkIfExistsInMenu($event);
 
         $redirect = new Redirect;
-        $redirect->url_old = $event->urlOld;
-        $redirect->url_new = $event->urlNew;
+        $redirect->url_old = urldecode($event->urlOld);
+        $redirect->url_new = urldecode($event->urlNew);
 
         $redirect->save();
     }

@@ -65,7 +65,7 @@ class LinkGeneratorService
             ? route($modelName . '.sub', ['catalog' => $parentAlias, 'alias' => $alias], false)
             : route($modelName . '.show', ['alias' => $alias], false);
 
-        return str_replace(['index'], '', $route);
+        return str_replace(['index'], '', urldecode($route));
     }
 
 }
