@@ -1,6 +1,6 @@
 <section class="section-lg bg-default text-center">
     <div class="container">
-        <div class="heading-4"><a href="{{ route('page.show', ['alias' => 'gallery']) }}">Наши работы</a></div>
+        <div class="heading-4"><a href="{{ route('page.show', ['alias' => 'оснащение-гостиничных-номеров-мебелью']) }}">Наши работы</a></div>
         <div class="row row-60">
             @foreach ($galleries as $gallery)
             <div class="col-md-6 col-xl-3">

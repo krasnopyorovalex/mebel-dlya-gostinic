@@ -26,8 +26,8 @@ Route::group(['middleware' => ['redirector', 'shortcode']], function () {
     Route::get('/{alias?}', 'PageController@show')->name('page.show');
     Route::get('статьи/{alias}', 'ArticleController@show')->name('article.show');
     Route::get('услуги/{alias}', 'ServiceController@show')->name('service.show');
-    Route::get('каталог/{alias}', 'CatalogController@show')->name('catalog.show');
-    Route::get('каталог/{catalog}/{alias}', 'CatalogController@sub')->name('catalog.sub');
+    Route::get('гостиничная-мебель/{alias}', 'CatalogController@show')->name('catalog.show');
+    Route::get('гостиничная-мебель/{catalog}/{alias}', 'CatalogController@sub')->name('catalog.sub');
     Route::get('продукт/{alias}', 'CatalogProductController@show')->name('catalog_product.show');
     Route::get('готовые-решения/{alias}', 'ReadySolutionController@show')->name('ready_solution.show');
 });

@@ -27,7 +27,7 @@
     <section class="section-lg bg-default">
         <div class="container text-center">
             <div class="heading-4">
-                <a href="{{ route('page.show', ['alias' => 'catalog']) }}">Каталог мебели</a>
+                <a href="{{ route('page.show', ['alias' => 'гостиничная-мебель']) }}">Гостиничная мебель</a>
             </div>
             <!-- Bootstrap tabs-->
             <div class="tabs-custom tabs-vertical row no-gutters">
@@ -113,7 +113,7 @@
 
     <section class="section-lg bg-default text-center">
         <div class="container">
-            <div class="heading-4"><a href="{{ route('page.show', ['alias' => 'articles']) }}">Статьи/О мебели</a></div>
+            <div class="heading-4"><a href="{{ route('page.show', ['alias' => 'статьи']) }}">Мебель под заказ Статьи</a></div>
             <div class="row row-60 justify-content-md-center">
 
                 @foreach ($articles as $article)
