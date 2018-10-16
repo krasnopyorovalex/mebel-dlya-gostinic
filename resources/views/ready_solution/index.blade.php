@@ -22,7 +22,7 @@
     <section class="section-sm bg-default">
         <div class="container">
             <div class="row row-60">
-                <div class="col-md-8 col-lg-8">
+                <div class="col-md-7 col-lg-7">
                 @if (count($readySolution->images))
                     <!-- Slick Carousel-->
                         <div class="slick-slider carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="1" data-child="#child-carousel" data-for="#child-carousel" data-photo-swipe-gallery="gallery">
@@ -46,7 +46,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="col-md-4 col-lg-4">
+                <div class="col-md-5 col-lg-5">
                     <div class="product-single">
                         <div class="heading-4">{{ $readySolution->name }}</div>
                         @if ($readySolution->price)
