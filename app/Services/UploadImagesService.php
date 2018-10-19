@@ -95,6 +95,11 @@ class UploadImagesService
      */
     private function getSavePath($imgName): string
     {
+        $directory = 'public/' . $this->entity . '/' . $this->entityId;
+        if ( ! \File::exists($directory)) {
+            \Storage::makeDirectory($directory);
+        }
+
         return public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $imgName);
     }
 
