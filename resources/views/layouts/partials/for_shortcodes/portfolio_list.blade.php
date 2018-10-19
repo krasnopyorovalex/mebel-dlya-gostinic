@@ -20,7 +20,7 @@
                             <div class="col-md-4 col-xl-4">
                                 <div class="product product-grid">
                                     <div class="product-img-wrap">
-                                        @if ($loop->index > 2)
+                                        @if ($loop->index > 5)
                                             <a href="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" data-lightbox="portfolio-{{ $portfolio->id }}"  data-title="{{ $image->name }}">
                                                 <img src="#" class="must__show" data-src="{{ asset('storage/gallery/' . $portfolio->id . '/' . $image->basename . '.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}">
                                             </a>
@@ -39,7 +39,7 @@
                             </div>
                         @endforeach
                         <div class="clearfix"></div>
-                        @if (count($portfolio->images) > 3)
+                        @if (count($portfolio->images) > 6)
                             <div class="btn__more-wrap">
                                 <div class="btn__more" title="Загрузить еще изображения" data-portfolio-id="{{ $portfolio->id }}">
                                     Показать еще
