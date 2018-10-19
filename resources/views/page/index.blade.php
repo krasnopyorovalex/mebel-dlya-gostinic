@@ -15,7 +15,7 @@
     <section class="section-limit bg-gray-lighter bg-image" style="background-image: url({{ $banners->get(1)->image->path }})">
         <div class="container">
             <div class="row">
-                <div class="col-md-7 col-lg-5 section-lg">
+                <div class="col-md-5 col-lg-4 section-lg">
                     <div class="wow fadeInUpSmall heading-2" data-wow-delay=".2s" data-wow-duration="1.2s">{{ $banners->get(1)->name }}</div>
                     <p class="big wow fadeInUpSmall" data-wow-delay=".5s" data-wow-duration="1.2s">{{ strip_tags($banners->get(1)->text) }}</p>
                     <a class="banner-link wow fadeInUpSmall" href="{{ $banners->get(1)->link }}" data-wow-delay=".7s" data-wow-duration="1.2s">{{ $banners->get(1)->btn_text }}</a>
@@ -66,7 +66,7 @@
         </div>
     </section>
 
-    <section class="recall__me">
+    <section class="recall__me hidden-xs">
         <div class="title__form heading-4">Заказать обратный звонок</div>
         <form action="{{ route('recall.send') }}" method="post" id="recall-form">
             @csrf
@@ -97,7 +97,7 @@
 
     @includeWhen($whyWes, 'layouts.partials.why_we', ['whyWes' => $whyWes])
 
-    <section class="section-limit bg-gray-lighter bg-image" style="background-image: url({{ $banners->get(2)->image->path }})">
+    <section class="section-limit bg-gray-lighter bg-image hidden-xs" style="background-image: url({{ $banners->get(2)->image->path }})">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-lg-5 section-lg">
@@ -111,7 +111,7 @@
 
     @includeWhen($guestbook, 'layouts.partials.guestbook', ['guestbook' => $guestbook])
 
-    <section class="section-lg bg-default text-center">
+    <section class="section-lg bg-default text-center hidden-xs">
         <div class="container">
             <div class="heading-4"><a href="{{ route('page.show', ['alias' => 'мебель-под-заказ-статьи']) }}">Мебель под заказ Статьи</a></div>
             <div class="row row-60 justify-content-md-center">

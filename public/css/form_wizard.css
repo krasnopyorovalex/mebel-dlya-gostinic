@@ -359,7 +359,9 @@
   display: block;
   text-align: center;
   padding: 10px;
-  border: 1px solid #e0e0e2;
+  border: 1px solid #000;
+  font-weight: bold;
+  font-size: 20px;
 }
 .steps-basic .message:empty {
   display: none;

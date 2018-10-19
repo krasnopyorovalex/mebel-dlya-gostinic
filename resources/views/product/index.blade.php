@@ -12,7 +12,7 @@
                 <p class="breadcrumbs-custom__title"></p>
                 <ul class="breadcrumbs-custom__path">
                     <li><a href="{{ route('page.show') }}">Главная</a></li>
-                    <li><a href="{{ route('page.show', ['alias' => 'каталог']) }}">Каталог</a></li>
+                    <li><a href="{{ route('page.show', ['alias' => 'гостиничная-мебель']) }}">Каталог</a></li>
                     @if ($product->catalog->catalog)
                         <li><a href="{{ route('catalog.show', ['catalog' => $product->catalog->catalog->alias]) }}">{{ $product->catalog->catalog->name }}</a></li>
                     @endif
@@ -26,7 +26,7 @@
     <section class="section-sm bg-default">
         <div class="container">
             <div class="row row-60">
-                <div class="col-md-6 col-lg-5">
+                <div class="col-md-7 col-lg-7">
                     @if (count($product->images))
                     <!-- Slick Carousel-->
                     <div class="slick-slider carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="1" data-child="#child-carousel" data-for="#child-carousel" data-photo-swipe-gallery="gallery">
@@ -41,7 +41,7 @@
                             </div>
                         @endforeach
                     </div>
-                    <div class="slick-slider" id="child-carousel" data-for=".carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="3" data-xs-items="4" data-sm-items="4" data-md-items="4" data-lg-items="4" data-xl-items="5" data-slide-to-scroll="1">
+                        <div class="slick-slider" id="child-carousel" data-for=".carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="3" data-xs-items="4" data-sm-items="8" data-md-items="8" data-lg-items="8" data-xl-items="9" data-slide-to-scroll="1">
                         @foreach ($product->images as $image)
                             <div class="item">
                                 <img src="{{ asset('storage/product/' . $product->id . '/' . $image->basename . '_thumb.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}" width="89" height="89"/>
@@ -50,7 +50,7 @@
                     </div>
                     @endif
                 </div>
-                <div class="col-md-6 col-lg-7">
+                <div class="col-md-5 col-lg-5">
                     <div class="product-single">
                         <div class="heading-4">{{ $product->name }}</div>
                         @if ($product->price)

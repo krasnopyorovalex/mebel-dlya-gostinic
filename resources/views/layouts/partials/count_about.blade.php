@@ -1,4 +1,4 @@
-<section class="section-lg bg-default text-center">
+<section class="section-lg bg-default text-center hidden-xs">
     <div class="container">
         <div class="title"><a href="{{ route('page.show', ['alias' => 'мебель-для-гостиниц-от-производителя']) }}">О нас</a></div>
         <div class="row justify-content-md-center row-50">

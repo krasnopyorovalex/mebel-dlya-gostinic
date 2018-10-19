@@ -2090,12 +2090,12 @@ $document.ready(function () {
                 portfolioId = _this.attr('data-portfolio-id');
             var images = $('.portfolio__items-' + portfolioId).find('.must__show');
 
-            images.slice(0,3).each(function () {
+            images.slice(0,6).each(function () {
               var _this = $(this);
                 return _this.attr('src', _this.attr('data-src')).fadeIn() && _this.removeClass('must__show');
             });
 
-            if((images.length - 3) < 1) {
+            if((images.length - 6) < 1) {
               return _this.hide();
             }
 
