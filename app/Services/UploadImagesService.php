@@ -44,7 +44,8 @@ class UploadImagesService
         $this->entity = $entity;
         $this->image = $request->file('upload');
 
-        $this->image->store($this->getSavePath());
+        //$this->image->store($this->getSavePath());
+        $this->insertWatermark();
         $this->createThumb();
 
         return $this;
@@ -89,17 +90,27 @@ class UploadImagesService
     }
 
     /**
+     * @param $imgName
      * @return string
      */
-    private function getSavePath(): string
+    private function getSavePath($imgName): string
     {
-        return 'public/' . $this->entity . '/' . $this->entityId . '/';
+        return public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $imgName);
     }
 
     private function createThumb(): void
     {
-        (new ImageManager())->make($this->image)->resize($this->widthThumb, null, function ($constraint) {
+        (new ImageManager())->make($this->image)
+            ->insert(public_path('images/watermark.png'),'bottom-right')
+            ->resize($this->widthThumb, null, function ($constraint) {
             $constraint->aspectRatio();
-        })->save(public_path('storage/' . $this->entity . '/' . $this->entityId .'/' . $this->getImageHashName() . '_thumb.' . $this->getExt()));
+        })->save($this->getSavePath($this->getImageHashName() . '_thumb.' . $this->getExt()));
+    }
+
+    private function insertWatermark(): void
+    {
+        (new ImageManager())->make($this->image)
+            ->insert(public_path('images/watermark.png'),'bottom-right')
+            ->save($this->getSavePath($this->getImageHashName() . '.' . $this->getExt()));
     }
 }
