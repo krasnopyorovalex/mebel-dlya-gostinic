@@ -1,6 +1,6 @@
 <!-- Categories-->
 <section class="section-sm">
-    <div class="heading-5">Категории</div>
+    <div class="heading-5">Каталог</div>
     <ul class="small list category__list">
         @foreach ($catalogs as $catalog)
             <li class="{{ (request('alias') == $catalog->alias || request('catalog') == $catalog->alias) ? 'is_opened': ''}}">

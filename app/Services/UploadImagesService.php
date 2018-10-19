@@ -115,7 +115,7 @@ class UploadImagesService
     private function insertWatermark(): void
     {
         (new ImageManager())->make($this->image)
-            ->insert(public_path('images/watermark.png'),'bottom-right')
+            ->insert(public_path('images/watermark.png'),'bottom-right', 30, -100)
             ->save($this->getSavePath($this->getImageHashName() . '.' . $this->getExt()));
     }
 }
