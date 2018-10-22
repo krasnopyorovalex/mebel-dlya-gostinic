@@ -11,8 +11,8 @@
 |
 */
 
-Route::pattern('alias', '[а-яa-z-]+');
-Route::pattern('catalog', '[а-яa-z-]+');
+Route::pattern('alias', '[\dа-яa-z-]+');
+Route::pattern('catalog', '[\dа-яa-z-]+');
 
 Auth::routes();
 
