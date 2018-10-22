@@ -10,8 +10,7 @@
             <div class="breadcrumbs-custom__inner">
                 <p class="breadcrumbs-custom__title">404 page</p>
                 <ul class="breadcrumbs-custom__path">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Pages</a></li>
+                    <li><a href="/">Главная</a></li>
                     <li class="active">404 page</li>
                 </ul>
             </div>
