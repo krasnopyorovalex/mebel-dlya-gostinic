@@ -32,7 +32,7 @@ class GetCatalogProductByAliasQuery
         return CatalogProduct::where('alias', $this->alias)->with(['images' => function ($query) {
             return $query->where('is_published', '1');
         }, 'originTabs', 'relativeProducts' => function ($query) {
-            return $query->with(['images']);
+            return $query->where('is_published', '1')->with(['images']);
         }, 'catalog' => function ($query) {
             return $query->with(['catalog']);
         }])->where('is_published', '1')->firstOrFail();
