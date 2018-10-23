@@ -29,7 +29,7 @@ Route::group(['middleware' => ['redirector', 'shortcode']], function () {
     Route::get('гостиничная-мебель/{alias}', 'CatalogController@show')->name('catalog.show');
     Route::get('гостиничная-мебель/{catalog}/{alias}', 'CatalogController@sub')->name('catalog.sub');
     Route::get('продукт/{alias}', 'CatalogProductController@show')->name('catalog_product.show');
-    Route::get('готовые-решения/{alias}', 'ReadySolutionController@show')->name('ready_solution.show');
+    Route::get('мебель-для-гостиниц-и-отелей/{alias}', 'ReadySolutionController@show')->name('ready_solution.show');
 });
 
 Route::group(['prefix' => '_root', 'middleware' => 'auth', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
