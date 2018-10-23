@@ -16,7 +16,9 @@
                     @if ($product->catalog->catalog)
                         <li><a href="{{ route('catalog.show', ['catalog' => $product->catalog->catalog->alias]) }}">{{ $product->catalog->catalog->name }}</a></li>
                     @endif
+                    @if ($product->catalog)
                     <li><a href="{{ route('catalog.sub', ['catalog' => $product->catalog->catalog->alias, 'alias' => $product->catalog->alias]) }}">{{ $product->catalog->name }}</a></li>
+                    @endif
                     <li class="active">{{ $product->name }}</li>
                 </ul>
             </div>
