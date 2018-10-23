@@ -165,7 +165,7 @@
             <div class="modal-body">
                 <h6 class="text-semibold">Доступные shortcode'ы:</h6>
                 <ul>
-                    <li>Статьи - {articles_list}</li>
+                    <li>Статьи - {articles}</li>
                     <li>Карта сайта - {sitemap}</li>
                     <li>Готовые решения - {ready_solutions}</li>
                     <li>Наши работы - {our_works}</li>
