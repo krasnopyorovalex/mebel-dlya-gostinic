@@ -20,7 +20,7 @@ class CreateReadySolutionRequest extends Request
             'keywords' => 'max:512|nullable',
             'text' => 'required|string',
             'alias' => 'required|max:255|unique:pages',
-            'price' => 'integer',
+            'price' => 'string|max:127|nullable',
             'is_published' => 'digits_between:0,1',
             'in_main' => 'digits_between:0,1',
             'image' => 'image',

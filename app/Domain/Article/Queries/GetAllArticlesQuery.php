@@ -16,11 +16,11 @@ class GetAllArticlesQuery
 
     /**
      * GetAllArticlesQuery constructor.
-     * @param bool $limit
+     * @param int $limit
      * @param bool $paginate
      * @param bool $isPublished
      */
-    public function __construct(bool $limit = false, bool $paginate = false, bool $isPublished = false)
+    public function __construct(int $limit = 0, bool $paginate = false, bool $isPublished = false)
     {
         $this->limit = $limit;
         $this->paginate = $paginate;

@@ -110,8 +110,8 @@
     </div>
     <div id="edit-image" class="modal fade"></div>
     @push('scripts')
-        <script src="{{ asset('dashboard/laravel-ckeditor/ckeditor.js') }}"></script>
-        <script src="{{ asset('dashboard/laravel-ckeditor/ckeditor.js') }}"></script>
+        <script src="{{ asset('dashboard/ckeditor/ckeditor.js') }}"></script>
+        <script src="{{ asset('dashboard/ckeditor/ckeditor.js') }}"></script>
         <script src="{{ asset('dashboard/assets/js/plugins/ui/dragula.min.js') }}" defer></script>
         <script src="{{ asset('dashboard/assets/js/pages/extension_dnd.js') }}" defer></script>
         <script src="{{ asset('dashboard/assets/js/plugins/uploaders/fileinput.min.js') }}" defer></script>

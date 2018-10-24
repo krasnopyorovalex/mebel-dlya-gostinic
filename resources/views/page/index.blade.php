@@ -113,7 +113,7 @@
 
     <section class="section-lg bg-default text-center hidden-xs">
         <div class="container">
-            <div class="heading-4"><a href="{{ route('page.show', ['alias' => 'мебель-под-заказ-статьи']) }}">Мебель под заказ Статьи</a></div>
+            <div class="heading-4"><a href="{{ route('page.show', ['alias' => 'мебель-под-заказ-статьи']) }}">Статьи о мебели</a></div>
             <div class="row row-60 justify-content-md-center">
 
                 @foreach ($articles as $article)

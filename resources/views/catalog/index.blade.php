@@ -45,7 +45,7 @@
                                                     <a href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">{{ $product->name }}</a>
                                                 </div>
                                                 @if ($product->price)
-                                                <p class="product-price"><span>{{ number_format($product->price, 0, '', ' ') }}</span></p>
+                                                <p class="product-price"><span>{{ $product->price }}</span></p>
                                                 @endif
                                                 <a class="button-black button button-icon button-icon-left" href="{{ route('catalog_product.show', ['alias' => $product->alias]) }}">
                                                     <span class="icon icon-md linear-icon-chevron-right"></span><span>Подробнее</span>

@@ -58,7 +58,7 @@
                     <div class="product-single">
                         <div class="heading-4">{{ $product->name }}</div>
                         @if ($product->price)
-                            <p class="product-price"><span>{{ number_format($product->price, 0, '', ' ') }}</span></p>
+                            <p class="product-price"><span>{{ $product->price }}</span></p>
                         @endif
                         <div class="product-text">
                             {!! $product->text !!}
@@ -127,7 +127,7 @@
                                         </a>
                                     </div>
                                     @if ($relativeProduct->price)
-                                        <p class="product-price"><span>{{ number_format($relativeProduct->price, 0, '', ' ') }}</span></p>
+                                        <p class="product-price"><span>{{ $relativeProduct->price }}</span></p>
                                     @endif
                                     <a class="button-black button button-icon button-icon-left" href="{{ route('catalog_product.show', ['alias' => $relativeProduct->alias]) }}">
                                         <span class="icon icon-md linear-icon-chevron-right"></span><span>Подробнее</span>

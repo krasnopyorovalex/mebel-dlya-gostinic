@@ -25,7 +25,7 @@ class UpdateReadySolutionRequest extends Request
             'image' => 'image',
             'imageAlt' => 'string|max:255',
             'imageTitle' => 'string|max:255',
-            'price' => 'integer',
+            'price' => 'string|max:127|nullable',
             'alias' => [
                 'required',
                 'max:255',
