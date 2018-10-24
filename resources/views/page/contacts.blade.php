@@ -22,7 +22,6 @@
         <div class="container">
             <div class="row row-50">
                 <div class="col-md-5 col-lg-4">
-                    <h1>{{ $page->name }}</h1>
                     {!! $page->text !!}
                 </div>
                 <div class="col-md-7 col-lg-8">

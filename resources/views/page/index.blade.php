@@ -174,9 +174,6 @@
 
     <section class="section-sm bg-default content">
         <div class="container">
-            <div class="text-center">
-                <h1>{{ $page->name }}</h1>
-            </div>
             <div class="row row-60 justify-content-md-center">
                 <div class="col-md-12 col-lg-12">
                     {!! $page->text !!}
