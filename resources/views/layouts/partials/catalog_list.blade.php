@@ -4,7 +4,7 @@
     <ul class="small list category__list">
         @foreach ($catalogs as $catalog)
             <li class="{{ (request('alias') == $catalog->alias || request('catalog') == $catalog->alias) ? 'is_opened': ''}}">
-                <a href="#">{{ $catalog->name }}</a>
+                <a href="{{ route('catalog.show', ['catalog' => $catalog->alias]) }}">{{ $catalog->name }}</a>
                 @if (count($catalog->catalogs))
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                     <ul>
