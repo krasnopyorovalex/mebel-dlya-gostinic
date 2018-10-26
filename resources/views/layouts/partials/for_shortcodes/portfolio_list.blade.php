@@ -40,7 +40,7 @@
                         @endforeach
                         <div class="clearfix"></div>
                         @if (count($portfolio->images) > 6)
-                            <button class="button button-primary button-icon button-icon-left btn__more">
+                            <button class="button button-primary button-icon button-icon-left btn__more" data-portfolio-id="{{ $portfolio->id }}">
                                 <span>Показать еще</span>
                             </button>
                         @endif
