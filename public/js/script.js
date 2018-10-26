@@ -2074,9 +2074,13 @@ $document.ready(function () {
 
     var categoryList = $('.category__list');
     categoryList.on('click', '> li > a', function (e) {
-        e.preventDefault();
-        var li = $(this).closest('li');
-        return li.find('ul').toggle('slow');
+        var li = $(this).closest('li'),
+            ul = li.find('ul');
+        if(ul.length) {
+            e.preventDefault();
+            return ul.toggle('slow');
+        }
+        return true;
     });
 
     lightbox.option({
@@ -2092,6 +2096,7 @@ $document.ready(function () {
 
             images.slice(0,6).each(function () {
               var _this = $(this);
+                _this.closest(".col-md-4").removeClass("hidden");
                 return _this.attr('src', _this.attr('data-src')).fadeIn() && _this.removeClass('must__show');
             });
 

@@ -17,7 +17,7 @@
                 @if (count($portfolio->images))
                     <div class="row justify-content-sm-center portfolio__items-{{ $portfolio->id }}">
                         @foreach ($portfolio->images as $image)
-                            <div class="col-md-4 col-xl-4">
+                            <div class="col-md-4 col-xl-4 @if ($loop->index > 5)hidden @endif">
                                 <div class="product product-grid">
                                     <div class="product-img-wrap">
                                         @if ($loop->index > 5)
@@ -40,12 +40,9 @@
                         @endforeach
                         <div class="clearfix"></div>
                         @if (count($portfolio->images) > 6)
-                            <div class="btn__more-wrap">
-                                <div class="btn__more" title="Загрузить еще изображения" data-portfolio-id="{{ $portfolio->id }}">
-                                    Показать еще
-                                </div>
-                                <!-- /.btn__more -->
-                            </div>
+                            <button class="button button-primary button-icon button-icon-left btn__more">
+                                <span>Показать еще</span>
+                            </button>
                         @endif
                     </div>
                 @endif
