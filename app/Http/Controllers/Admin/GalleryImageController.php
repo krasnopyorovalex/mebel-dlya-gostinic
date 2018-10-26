@@ -57,7 +57,7 @@ class GalleryImageController extends Controller
      */
     public function store(CreateGalleryImageRequest $request, $gallery)
     {
-        $image = $this->uploadGalleryImagesService->setWidthThumb(250)->upload($request, 'gallery', $gallery);
+        $image = $this->uploadGalleryImagesService->setWidthThumb(385)->upload($request, 'gallery', $gallery);
         $this->dispatch(new CreateGalleryImageCommand($image));
 
         return [
