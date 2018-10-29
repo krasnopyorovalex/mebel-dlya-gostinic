@@ -36,7 +36,7 @@
                     <div class="slick-slider carousel-parent" data-arrows="false" data-loop="false" data-dots="false" data-swipe="true" data-items="1" data-child="#child-carousel" data-for="#child-carousel" data-photo-swipe-gallery="gallery">
                         @foreach ($product->images as $image)
                             <div class="item">
-                                <a class="img-thumbnail-variant-2" href="{{ asset('storage/product/' . $product->id . '/' . $image->basename . '.' . $image->ext) }}" data-photo-swipe-item="" data-size="600x600">
+                                <a class="img-thumbnail-variant-2" href="{{ asset('storage/product/' . $product->id . '/' . $image->basename . '.' . $image->ext) }}" data-photo-swipe-item="" data-size="800x650">
                                     <figure>
                                         <img src="{{ asset('storage/product/' . $product->id . '/' . $image->basename . '.' . $image->ext) }}" alt="{{ $image->alt }}" title="{{ $image->title }}" width="535" height="535"/>
                                     </figure>

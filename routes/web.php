@@ -21,6 +21,7 @@ Route::post('contact-send', 'ContactController@send')->name('contact.send');
 Route::post('product-send', 'CatalogProductController@send')->name('product.send');
 Route::post('plugin-send', 'PluginController@send')->name('plugin.send');
 Route::get('sitemap.xml', 'SitemapController@xml')->name('sitemap.xml');
+Route::get('robots.txt', 'RobotsController@show');
 
 Route::group(['middleware' => ['redirector', 'shortcode']], function () {
     Route::get('/{alias?}', 'PageController@show')->name('page.show');

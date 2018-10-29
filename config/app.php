@@ -174,6 +174,7 @@ return [
         App\Providers\WhyWesServiceProvider::class,
         App\Providers\ArticlesServiceProvider::class,
         App\Providers\GuestbookServiceProvider::class,
+        App\Providers\SeoBlocksServiceProvider::class,
         App\Providers\PartnersServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
     ],
