@@ -39,7 +39,7 @@ use Illuminate\Database\Eloquent\Model;
 class CatalogProduct extends Model
 {
 
-    public const PER_PAGE = 16;
+    public const PER_PAGE = 18;
     /**
      * @var array
      */
