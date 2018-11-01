@@ -19,7 +19,7 @@ class CatalogController extends Controller
     public function show(string $alias)
     {
         $catalog = $this->dispatch(new GetCatalogByAliasQuery($alias));
-        $products = $catalog->products()->paginate(CatalogProduct::PER_PAGE);
+        $products = $catalog->products()->paginate(1);
 
         return view('catalog.index', ['catalog' => $catalog, 'products' => $products]);
     }
