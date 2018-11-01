@@ -44,7 +44,6 @@
                             @input(['name' => 'alias', 'label' => 'Alias', 'entity' => $service])
                             @textarea(['name' => 'preview', 'label' => 'Превью услуги', 'id' => 'editor-full2', 'entity' => $service])
                             @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $service])
-                            @checkbox(['name' => 'is_published', 'label' => 'Опубликовано?', 'entity' => $service])
 
                             @submit_btn()
                         </div>

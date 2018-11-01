@@ -54,7 +54,6 @@
                                 </div>
 
                                 @textarea(['name' => 'text', 'label' => 'Текст рядом со слайдером', 'entity' => $catalogProduct])
-                                @checkbox(['name' => 'is_published', 'label' => 'Опубликовано?', 'entity' => $catalogProduct])
 
                                 <hr>
                                 <h3>Табы</h3>

@@ -36,7 +36,6 @@
 
                             @textarea(['name' => 'text', 'label' => 'Текст'])
                             @checkbox(['name' => 'in_main', 'label' => 'Отображать на главной?', 'isChecked' => true])
-                            @checkbox(['name' => 'is_published', 'label' => 'Опубликовано?', 'isChecked' => true])
                             <hr>
                             <h3>Табы</h3>
 

@@ -68,7 +68,6 @@
 
                                         @textarea(['name' => 'text', 'label' => 'Текст', 'entity' => $readySolution])
                                         @checkbox(['name' => 'in_main', 'label' => 'Отображать на главной?', 'entity' => $readySolution])
-                                        @checkbox(['name' => 'is_published', 'label' => 'Опубликовано?', 'entity' => $readySolution])
 
                                         <hr>
                                         <h3>Табы</h3>

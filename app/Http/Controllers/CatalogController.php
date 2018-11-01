@@ -32,7 +32,7 @@ class CatalogController extends Controller
     public function sub(string $catalog, string $alias)
     {
         $catalog = $this->dispatch(new GetCatalogByAliasQuery($alias));
-        $products = $catalog->products()->where('is_published', '1')->paginate(CatalogProduct::PER_PAGE);
+        $products = $catalog->products()->paginate(CatalogProduct::PER_PAGE);
 
         return view('catalog.index', ['catalog' => $catalog, 'products' => $products]);
     }
