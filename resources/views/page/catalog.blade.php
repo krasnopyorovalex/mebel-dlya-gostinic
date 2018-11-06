@@ -43,6 +43,11 @@
                                 </div>
                             @endforeach
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                {!! $page->text !!}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 section-divided__aside section__aside-left">
